@@ -7,8 +7,9 @@
 	
 	<!-- 로그인 버튼 -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!--
   <style>
-  .btn-social-login {
+   .btn-social-login {
     transition: all .2s;
     outline: 0;
     border: 1px solid transparent;
@@ -20,10 +21,10 @@
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
   }
   .text-dark { color: #343a40!important; }
-  </style>
+  </style> -->
   
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
 </head>
@@ -65,6 +66,30 @@ function getGoogleMe(){
 <body>
  <!-- 버튼 코드 -->
   <hr>
-  <button class='btn-social-login' style='background:#D93025'onclick="authGoogle()" ><i class="xi-3x xi-google"></i></button>
+
+ <!-- <div class="button"> 
+ <button class='btn-social-login' style='background:#D93025'onclick="authGoogle()" ><i class="xi-3x xi-google"></i></button>
+	</div> -->
+	<div class="item-wrapper">
+		<div class="box">
+		</div>
+	  <div class="btn-section">
+		<button class="btn btn-google" onclick="authGoogle()">
+		  <span class="btn-gradient">
+			<i class="fa fa-google"></i>
+		  </span>
+		  <span class="btn-text">Sign with Google</span>
+		</button>
+	  </div>
+	  </div>
+  <!-- <div class="btn-section">
+	<button class="btn btn-google" onclick="authGoogle()">
+    <span class="btn-gradient">
+      <i class="fa fa-google"></i>
+    </span>
+    <span class="btn-text">Google</span>
+  	</button>
+</div> -->
+
 </body>
 </html>

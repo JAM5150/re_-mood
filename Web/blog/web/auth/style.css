@@ -1,0 +1,78 @@
+body{
+    margin:20px auto;
+    background-color: #efefef;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1140px;
+}
+
+.item-wrapper {
+    display: inline-block;
+    background : white;
+    width : 575px;
+    height: 589px;
+    position: relative;
+    margin: 0.5em;
+    padding: 0.5em 0.5em 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    top:350px;
+    left:300px;
+    /* left:50%;
+    top:50%;
+    transform: translate(-50%, -50%); */
+}
+
+.login-info-box {
+    position: absolute;
+    left: 0;
+    bottom: 0.75em;
+    height:200px;
+    width: 150%;
+    text-align: center;
+  }
+
+/* .btn-social-login{
+    position : absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+} */
+
+.btn-section .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    float: center;
+    width: 23%;
+    margin: auto;
+    padding: 0px 20px;
+  }
+  .btn-section .btn .btn-gradient {
+    position: relative;
+    left: -20px;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 0px 0px 0px rgba(78, 72, 72, 0.4);
+    border-top-right-radius: 60px;
+    padding: 10px;
+  }
+  .btn-section .btn .btn-gradient i {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-section .btn.btn-google {
+    background-color: #f67280;
+  }
+  .btn-section .btn-text {
+    width: 60%;
+  }
+  .btn-section.btn-radius .btn,
+  .btn-section.btn-radius .btn-gradient {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
