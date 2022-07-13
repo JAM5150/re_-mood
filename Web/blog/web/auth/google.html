@@ -1,0 +1,70 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<title>구글 OAuth 테스트</title>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!-- 로그인 버튼 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <style>
+  .btn-social-login {
+    transition: all .2s;
+    outline: 0;
+    border: 1px solid transparent;
+    padding: .5rem !important;
+    border-radius: 50%;
+    color: #fff;
+  }
+  .btn-social-login:focus {
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+  }
+  .text-dark { color: #343a40!important; }
+  </style>
+  
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+</head>
+
+<script src="/lib/hello.all.js"></script>
+
+<script>
+// 인증 초기화
+hello.init({
+	google: 'client id'
+}, {redirect_uri: '/auth/callbackGoogle'});  // 구글 콘솔에서 승인된 리디렉션 URL의 부분을 입력.
+
+// 구글 로그인
+function authGoogle(){
+	hello('google').login({scope: 'email'}).then(function(auth) {
+		hello(auth.network).api('/me').then(function(r) {
+			accessToken = auth.authResponse.access_token;
+			getGoogleMe(); // 로그인 한 후에 바로 내 정보를 호출
+		});
+	});
+}
+
+// 구글에서 내 정보 로드
+function getGoogleMe(){
+	hello('google').api('me').then(
+		function(json) {
+			console.log("정보: ", json)
+			console.log("이름: ", json.name)
+			console.log("이메일: ", json.email)
+			console.log("썸네일: ", json.thumbnail)
+			console.log("고유ID: ", json.id)
+		},
+		function(e) {
+	    		console.log('me error : ' + e.error.message);
+		}
+	);
+}
+</script>
+<body>
+ <!-- 버튼 코드 -->
+  <hr>
+  <button class='btn-social-login' style='background:#D93025'onclick="authGoogle()" ><i class="xi-3x xi-google"></i></button>
+</body>
+</html>
