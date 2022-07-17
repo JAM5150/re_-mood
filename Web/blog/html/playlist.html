@@ -7,7 +7,18 @@
 </head>
 <body>
 
-
-
+<div class="outside">
+    <ul id="emotionmenu">
+        <li><button name="joy" type="button" class="emotionbutton">기쁨</button></li>
+        <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
+        <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
+        <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
+        <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
+    </ul>
+        <button id="edit" type="button" name="edit" onClick="location.href='playlistEdit.html'">편집</button>
+        <button id="play" type="button" name="play" onclick=""><img src="/Web/blog/css/play.png" alt="play"></button>
+        <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
+</div>
+<script src="/Web/blog/js/playlist.js"></script> 
 </body>
 </html>

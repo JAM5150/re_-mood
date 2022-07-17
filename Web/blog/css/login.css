@@ -6,9 +6,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-.outside {
+.container {
   background-color: white;
   border : solid white;
+  border-radius: 12px;
   position: relative;
   display: flex;
 
@@ -25,7 +26,7 @@ img {
   height:172px;
 }
 
-button.login {
+#login_button.login {
   display: block;
   position: absolute;
   background-color: #f67280;
@@ -43,7 +44,7 @@ button.login {
   color:white;
 }
 
-button.login:hover {
+#login_button.login:hover {
   background: #e8616e;
   box-shadow: -3px -3px 3px rgb(172, 172, 172), 3px 3px 3px rgb(237, 237, 237);
   transition: 0.3s;

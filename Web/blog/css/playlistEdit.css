@@ -70,11 +70,31 @@ body{
 .quit:after {
     display: inline-block;content: "\00d7"; font-size:55pt;
 }
-/*편집버튼*/
-.edit{
+
+/*삭제&완료버튼*/
+#editsave {
+    display: flex;
+}
+
+/*편집완료 버튼*/
+#editsave .save{
     position: absolute;
+    background-color: white;
+    border:none;
     top:130px;
     left:1150px;
+    line-height:20px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    cursor:pointer;
+}
+
+/*삭제버튼*/
+#editsave .del{
+    position: absolute;
+    top:130px;
+    left:1100px;
     border:none;
     background-color: white;
     line-height:20px;

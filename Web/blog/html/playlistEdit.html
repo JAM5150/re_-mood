@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<title>#MOOD Playlist</title>
+	<link rel="stylesheet" href="/Web/blog/css/playlistEdit.css">
+</head>
+<body>
+  <!-- <form action="playlist_edit_test.php" method="post"> -->
+    
+<div class="outside">
+    <ul id="emotionmenu">
+        <li><a href=""><button name="joy" type="button" class="emotionbutton">기쁨</button></li></a>
+        <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
+        <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
+        <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
+        <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
+    </ul>
+    <ul id="editsave">
+      <button type="button" class="del" onClick="">삭제</button>
+      <button id="savebtn" type="button" class="save" onClick="history.back()">완료</button>
+    </ul>
+        <button type="button" class="play" onclick=""><img src="/Web/blog/css/play.png" alt="play"></button>
+        <button type="button" class="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
+</div>
+<script src="/Web/blog/js/playlistEdit.js"></script>
+</body>
+</html>
