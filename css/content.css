@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 링크 색상 제거 */
+}
+
+.logo-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: scaleX(-1);
+  color: black;
+  margin-right: 15px;
+  padding: 0px 0px 63px 0px; /* 상우하좌 */
+}
+
+.logo-hashtag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: black;
+  transform: scaleX(-1);
+  padding: 0px 0px 15px 0px;
+}
+
+.logo-hashtag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  transform: scaleX(-1);
+}
+
+.logo-hashtag h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 85px;
+  color: black;
+  padding: 0px 0px 15px 0px;
+}
+h1 {
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 400;
+  font-size: 100px;
+  color: black;
+}
