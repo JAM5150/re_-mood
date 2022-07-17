@@ -26,7 +26,7 @@ $url = "https://mood-flask-vfml.run-asia-northeast1.goorm.io/result";  //감정�
 $content = $_POST['content'];
 // echo "content: ".$content."<br/>";
 // uid 받아와서 지정할 부분
-$uid = $_SESSION['uid'];
+$uid = $_SESSION['user_email_address'];
 //user 저장
 /*
 $userdata_save_sql_result = mysqli_query($con, "INSERT INTO user (

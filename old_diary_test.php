@@ -5,6 +5,7 @@ if(!session_id()) {
 }
 //DB 연결
 include("DB_connect.php");
+/*
 //session 초기화
 include("logout_test.php");
 //email을 통한 로그인
@@ -25,10 +26,19 @@ else {
 	//유저 정보가 있다면 DB저장은 건너뜀
 	// echo "else > success";
 }
-
+*/
+//index에 맞춘 수정
+$post_email = $_SESSION['user_email_address'];
+$db_user_data = mysqli_query($con,
+		"SELECT uid FROM user WHERE uid= '$post_email'");
+$user_data = mysqli_fetch_assoc($db_user_data);
+if($user_data == NULL) {
+	// echo "if> success";
+	include("user_save.php");
+}
 // $date = $_POST['date']; //테스트용 문장
 $date = date('Y-m-d'); //오늘 날짜 받아오기
-$uid = $_SESSION['uid']; //uid 받아오기
+$uid = $_SESSION['user_email_address']; //uid 받아오기
 
 //날짜와 uid에 일치하는 일기 모두 가져오기
 $old_diary_data = mysqli_query($con,

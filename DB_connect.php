@@ -5,4 +5,5 @@ $user = 'newuser';
 $pw = 'mooddiary';
 $dbName = 'web_mooddiary';
 $con = new mysqli($host, $user, $pw, $dbName, $dbPort);
+
 ?>

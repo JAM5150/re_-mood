@@ -1,15 +1,15 @@
 <?php
 if(!session_id()) {
-	// id°¡ ¾øÀ» °æ¿ì ¼¼¼Ç ½ÃÀÛ
+	// idê°€ ì—†ì„ ê²½ìš° ì„¸ì…˜ ì‹œìž‘
 	session_start();
 }
 include("DB_connect.php");
-// ¼¼¼Ç »ç¿ë $uid = $_SESSION['uid'];
-// Å×½ºÆ®¿ë
+// ì„¸ì…˜ ì‚¬ìš© $uid = $_SESSION['uid'];
+// í…ŒìŠ¤íŠ¸ìš©
 $uid = 'test_mood@gmail.com';
 echo "uid: ".$uid."<br/>";
 
-//º¯¼ö ¼±¾ð
+//ë³€ìˆ˜ ì„ ì–¸
 $joy_survey_result = array();
 $soso_survey_result = array();
 $sad_survey_result = array();
@@ -17,40 +17,60 @@ $angry_survey_result = array();
 $surprise_survey_result = array();
 //joy
 $save_joy_result = mysqli_query($con,
-		"SELECT * FROM survey WHERE uid = '$uid' AND analystic = 'joy'");
-$row = mysqli_fetch_assoc($save_joy_result);
-$joy_survey_result[0] = $row['track_name'];
+		"SELECT track_id FROM survey WHERE uid = '$uid' AND analystic = 'joy'");
+$row12 = mysqli_fetch_assoc($save_joy_result);
+$row1 = $row12['track_id'];
+$save_music_result = mysqli_query($con,
+		"SELECT * FROM music_info WHERE track_id = '$row1'");
+$row = mysqli_fetch_assoc($save_music_result);
+$joy_survey_result[0] = $row["track_name"];
 $joy_survey_result[1] = $row['artist_name'];
 //soso
 $save_soso_result = mysqli_query($con,
-		"SELECT * FROM survey WHERE uid = '$uid' AND analystic = 'soso'");
-$row = mysqli_fetch_assoc($save_soso_result);
+		"SELECT track_id FROM survey WHERE uid = '$uid' AND analystic = 'soso'");
+$row12 = mysqli_fetch_assoc($save_soso_result);
+$row1 = $row12['track_id'];
+$save_music_result = mysqli_query($con,
+		"SELECT * FROM music_info WHERE track_id = '$row1'");
+$row = mysqli_fetch_assoc($save_music_result);
 $soso_survey_result[0] = $row['track_name'];
 $soso_survey_result[1] = $row['artist_name'];
 //sad
 $save_sad_result = mysqli_query($con,
-		"SELECT * FROM survey WHERE uid = '$uid' AND analystic = 'sad'");
-$row = mysqli_fetch_assoc($save_sad_result);
+		"SELECT track_id FROM survey WHERE uid = '$uid' AND analystic = 'sad'");
+$row12 = mysqli_fetch_assoc($save_sad_result);
+$row1 = $row12['track_id'];
+$save_music_result = mysqli_query($con,
+		"SELECT * FROM music_info WHERE track_id = '$row1'");
+$row = mysqli_fetch_assoc($save_music_result);
 $sad_survey_result[0] = $row['track_name'];
 $sad_survey_result[1] = $row['artist_name'];
 //angry
 $save_angry_result = mysqli_query($con,
-		"SELECT * FROM survey WHERE uid = '$uid' AND analystic = 'angry'");
-$row = mysqli_fetch_assoc($save_angry_result);
+		"SELECT track_id FROM survey WHERE uid = '$uid' AND analystic = 'angry'");
+$row12 = mysqli_fetch_assoc($save_angry_result);
+$row1 = $row12['track_id'];
+$save_music_result = mysqli_query($con,
+		"SELECT * FROM music_info WHERE track_id = '$row1'");
+$row = mysqli_fetch_assoc($save_music_result);
 $angry_survey_result[0] = $row['track_name'];
 $angry_survey_result[1] = $row['artist_name'];
 //surprise
 $save_surprise_result = mysqli_query($con,
-		"SELECT * FROM survey WHERE uid = '$uid' AND analystic = 'surprise'");
-$row = mysqli_fetch_assoc($save_surprise_result);
+		"SELECT track_id FROM survey WHERE uid = '$uid' AND analystic = 'surprise'");
+$row12 = mysqli_fetch_assoc($save_surprise_result);
+$row1 = $row12['track_id'];
+$save_music_result = mysqli_query($con,
+		"SELECT * FROM music_info WHERE track_id = '$row1'");
+$row = mysqli_fetch_assoc($save_music_result);
 $surprise_survey_result[0] = $row['track_name'];
 $surprise_survey_result[1] = $row['artist_name'];
 
-//Ãâ·Â Å×½ºÆ®
-echo "joy- ³ë·¡ ¸í: ".$joy_survey_result[0]." °¡¼ö ¸í: ".$joy_survey_result[1]."<br/>";
-echo "soso- ³ë·¡ ¸í: ".$soso_survey_result[0]." °¡¼ö ¸í: ".$soso_survey_result[1]."<br/>";
-echo "sad- ³ë·¡ ¸í: ".$sad_survey_result[0]." °¡¼ö ¸í: ".$sad_survey_result[1]."<br/>";
-echo "angry- ³ë·¡ ¸í: ".$angry_survey_result[0]." °¡¼ö ¸í: ".$angry_survey_result[1]."<br/>";
-echo "surprise- ³ë·¡ ¸í: ".$surprise_survey_result[0]." °¡¼ö ¸í: ".$surprise_survey_result[1]."<br/>";
+//ì¶œë ¥ í…ŒìŠ¤íŠ¸
+echo "joy- ë…¸ëž˜ ëª…: ".$joy_survey_result[0]." ê°€ìˆ˜ ëª…: ".$joy_survey_result[1]."<br/>";
+echo "soso- ë…¸ëž˜ ëª…: ".$soso_survey_result[0]." ê°€ìˆ˜ ëª…: ".$soso_survey_result[1]."<br/>";
+echo "sad- ë…¸ëž˜ ëª…: ".$sad_survey_result[0]." ê°€ìˆ˜ ëª…: ".$sad_survey_result[1]."<br/>";
+echo "angry- ë…¸ëž˜ ëª…: ".$angry_survey_result[0]." ê°€ìˆ˜ ëª…: ".$angry_survey_result[1]."<br/>";
+echo "surprise- ë…¸ëž˜ ëª…: ".$surprise_survey_result[0]." ê°€ìˆ˜ ëª…: ".$surprise_survey_result[1]."<br/>";
 
 ?>
