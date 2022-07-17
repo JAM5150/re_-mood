@@ -2,8 +2,14 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-	<title>#MOOD Playlist</title>
+    <meta name="viewport" content="width=device-width" />	
+    <title>#MOOD Playlist</title>
 	<link rel="stylesheet" href="/Web/blog/css/playlist.css">
+    
+    <script
+      src="https://kit.fontawesome.com/8aa8789802.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
 
@@ -15,10 +21,77 @@
         <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
         <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
     </ul>
+
         <button id="edit" type="button" name="edit" onClick="location.href='playlistEdit.html'">편집</button>
-        <button id="play" type="button" name="play" onclick=""><img src="/Web/blog/css/play.png" alt="play"></button>
         <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
-</div>
+    
+    <div class="playlist_C">
+        <ul class="playlist">
+            <li class="playlist__song">
+              <img
+                class="albumcover"
+                src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined"
+                width="50%"
+              />
+              <div class="playlist__info">
+                <h5>I Don't Care</h5>
+                <h6>투애니원</h6>
+              </div>
+    
+              <div class="btn-play">
+                <a
+                  href="https://open.spotify.com/album/5WyEkWi7ZPMrVSbU1Cabba?highlight=spotify:track:1ErdaM9N7EJ7trhXFnDECg"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-play fa-3x"></i>
+                </a>
+              </div>
+            </li>
+
+            <li class="playlist__song">
+              <img
+                class="albumcover"
+                src="https://image.bugsm.co.kr/album/images/original/5323/532394.jpg?version=undefined"
+                width="50%"
+              />
+              <div class="playlist__info">
+                <h5>하루의 끝(End of a day)</h5>
+                <h6>종현</h6>
+              </div>
+
+              <div class="btn-play">
+                <a
+                  href="https://open.spotify.com/album/6tYoidZViVVzSXG4jKEmNd?highlight=spotify:track:0cAFqRrz8OqAoHdbiCM5OD"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-play fa-3x"></i>
+                </a>
+              </div>
+            </li>
+
+            <li class="playlist__song">
+              <img
+                class="albumcover"
+                src="https://image.bugsm.co.kr/album/images/original/155189/15518966.jpg?version=undefined"
+                width="50%"
+              />
+              <div class="playlist__info">
+                <h5>Every Second</h5>
+                <h6>Mina Okabe</h6>
+              </div>
+    
+              <div class="btn-play">
+                <a
+                  href="https://open.spotify.com/album/4VLxnKcNSnVyxw4ByPzQVs?highlight=spotify:track:6dquCx5KAW5jCgGgoTlghL"
+                  target="_blank"
+                >
+                  <i class="fa-solid fa-play fa-3x"></i>
+                </a>
+              </div>
+            </li>
+        </ul>
+    </div>
+ </div>
 <script src="/Web/blog/js/playlist.js"></script> 
 </body>
 </html>
