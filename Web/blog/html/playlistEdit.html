@@ -2,27 +2,99 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-	<title>#MOOD Playlist</title>
-	<link rel="stylesheet" href="/Web/blog/css/playlistEdit.css">
+    <meta name="viewport" content="width=device-width" />	
+    <title>#MOOD Playlist</title>
+	<link rel="stylesheet" href="/Web/blog/css/playlist.css">
+    
+    <script
+      src="https://kit.fontawesome.com/8aa8789802.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
   <!-- <form action="playlist_edit_test.php" method="post"> -->
     
 <div class="outside">
     <ul id="emotionmenu">
-        <li><a href=""><button name="joy" type="button" class="emotionbutton">기쁨</button></li></a>
-        <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
-        <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
-        <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
-        <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
+          <li><button name="joy" type="button" class="emotionbutton">기쁨</button></li>
+          <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
+          <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
+          <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
+          <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
     </ul>
     <ul id="editsave">
       <button type="button" class="del" onClick="">삭제</button>
-      <button id="savebtn" type="button" class="save" onClick="history.back()">완료</button>
+      <button type="button" class="save" onClick="history.back()">완료</button>
     </ul>
-        <button type="button" class="play" onclick=""><img src="/Web/blog/css/play.png" alt="play"></button>
-        <button type="button" class="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
+    <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>
+      
+    <div class="playlist_C">
+      <ul class="playlist">
+          <li class="playlist__song">
+            <img
+              class="albumcover"
+              src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined"
+              width="50%"
+            />
+            <div class="playlist__info">
+              <h5>I Don't Care</h5>
+              <h6>투애니원</h6>
+            </div>
+  
+            <div class="btn-play">
+              <a
+                href="https://open.spotify.com/album/5WyEkWi7ZPMrVSbU1Cabba?highlight=spotify:track:1ErdaM9N7EJ7trhXFnDECg"
+                target="_blank"
+              >
+                <i class="fa-solid fa-play fa-3x"></i>
+              </a>
+            </div>
+          </li>
+
+          <li class="playlist__song">
+            <img
+              class="albumcover"
+              src="https://image.bugsm.co.kr/album/images/original/5323/532394.jpg?version=undefined"
+              width="50%"
+            />
+            <div class="playlist__info">
+              <h5>하루의 끝(End of a day)</h5>
+              <h6>종현</h6>
+            </div>
+
+            <div class="btn-play">
+              <a
+                href="https://open.spotify.com/album/6tYoidZViVVzSXG4jKEmNd?highlight=spotify:track:0cAFqRrz8OqAoHdbiCM5OD"
+                target="_blank"
+              >
+                <i class="fa-solid fa-play fa-3x"></i>
+              </a>
+            </div>
+          </li>
+
+          <li class="playlist__song">
+            <img
+              class="albumcover"
+              src="https://image.bugsm.co.kr/album/images/original/155189/15518966.jpg?version=undefined"
+              width="50%"
+            />
+            <div class="playlist__info">
+              <h5>Every Second</h5>
+              <h6>Mina Okabe</h6>
+            </div>
+  
+            <div class="btn-play">
+              <a
+                href="https://open.spotify.com/album/4VLxnKcNSnVyxw4ByPzQVs?highlight=spotify:track:6dquCx5KAW5jCgGgoTlghL"
+                target="_blank"
+              >
+                <i class="fa-solid fa-play fa-3x"></i>
+              </a>
+            </div>
+          </li>
+      </ul>
+    </div>
 </div>
-<script src="/Web/blog/js/playlistEdit.js"></script>
-</body>
-</html>
+  <script src="/Web/blog/js/playlist.js"></script> 
+  </body>
+  </html>      

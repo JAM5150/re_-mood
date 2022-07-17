@@ -85,14 +85,6 @@ body{
     font-size: 13px;
     cursor:pointer;
 }
-/* 재생버튼
-#play{
-    width:auto;
-    height:auto;
-    border:none;
-    background-color: white;
-    cursor:pointer;
-} */
 
 .playlist_C{
     position: absolute;

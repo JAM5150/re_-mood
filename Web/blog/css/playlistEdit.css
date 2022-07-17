@@ -103,11 +103,76 @@ body{
     font-size: 13px;
     cursor:pointer;
 }
+
+.playlist_C{
+    position: absolute;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    top:150px;
+    left:150px;
+}
+
+ul.playlist{
+    list-style: none;
+}
+
+.playlist__song {
+    margin-bottom: 30px;
+    margin-right: 100px;
+}
+  
+.albumcover {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 1px #5d5656;
+}
+
+.playlist__info {
+    display: inline-block;
+    align-items: left;
+    margin-left: 0px;
+}
+
+/*노래제목*/
+.playlist__info h5 {
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+/*가수*/
+.playlist__info h6 {
+    margin-top: 5px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+/*재생버튼a태그*/  
+a {
+    text-decoration: none;
+    color: inherit;
+}
 /*재생버튼*/
-.play{
-    width:auto;
-    height:auto;
-    border:none;
-    background-color: white;
-    cursor:pointer;
+.btn-play {
+    display:inline-block;
+    color:#f67280;
+    margin-left: 50px;
+    margin-top: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play:hover{
+    color: #e8616e;
 }
