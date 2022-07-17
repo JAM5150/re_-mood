@@ -1,0 +1,113 @@
+body{
+    background-color: #efefef;
+    height : 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+/*플레이리스트 창*/
+.outside {
+    background-color: white;
+    border : solid white;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+  
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    height:500px;
+    width:1293px;
+}
+/*감정 선택 버튼 전체설정*/
+#emotionmenu li{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    color:black;
+    background-color:white;
+    float:left;
+    margin:100px;
+    line-height:30px;
+    vertical-align: middle;
+    text-align: center;
+}
+/*감정 버튼 설정*/
+#emotionmenu .emotionbutton{
+    position:absolute;
+    top:80px;
+    text-decoration: none;
+    color:black;
+    display: block;
+    width:auto;
+    font-size:20px;
+    font-weight: bold;
+    font-family:"Trebuchet MS", Dotum, Arial ;
+    border:none;
+    background-color: white;
+    border-radius: 12px;
+    cursor:pointer;
+    padding : 5px 12px;
+}
+#emotionmenu .emotionbutton:hover{
+    background-color: #f67280;
+}
+/*나가기 버튼*/
+.quit{
+    position: absolute;
+    left: 1200px;
+    top: 10px;
+    width:50px;
+    height: 70px;
+    display:inline-block;*display:inline;
+    border:none;
+    background-color: white;
+    cursor:pointer; 
+}
+.quit:after {
+    display: inline-block;content: "\00d7"; font-size:55pt;
+}
+
+/*삭제&완료버튼*/
+#editsave {
+    display: flex;
+}
+
+/*편집완료 버튼*/
+#editsave .save{
+    position: absolute;
+    background-color: white;
+    border:none;
+    top:130px;
+    left:1150px;
+    line-height:20px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    cursor:pointer;
+}
+
+/*삭제버튼*/
+#editsave .del{
+    position: absolute;
+    top:130px;
+    left:1100px;
+    border:none;
+    background-color: white;
+    line-height:20px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    cursor:pointer;
+}
+/*재생버튼*/
+.play{
+    width:auto;
+    height:auto;
+    border:none;
+    background-color: white;
+    cursor:pointer;
+}

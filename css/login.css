@@ -1,0 +1,51 @@
+body{
+    height : 100vh;
+    display: flex;
+    background-color: #efefef;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+  background-color: white;
+  border : solid white;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height:15cm;
+  width:15cm;
+}
+
+img {
+  width:184px;
+  height:172px;
+}
+
+#login_button.login {
+  display: block;
+  position: absolute;
+  background-color: #f67280;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius:12px;
+
+  top:450.87px;
+  left:center;
+  width:344px;
+  height:70px;
+
+  font-size: 30px;
+  color:white;
+}
+
+#login_button.login:hover {
+  background: #e8616e;
+  box-shadow: -3px -3px 3px rgb(172, 172, 172), 3px 3px 3px rgb(237, 237, 237);
+  transition: 0.3s;
+}

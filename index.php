@@ -4,7 +4,7 @@
 
 //Include Configuration File
 include('config.php');
-
+include("DB_connect.php");
 $login_button = '';
 
 //This $_GET["code"] variable value received after user has login into their Google Account redirct to PHP script then this variable value has been received
@@ -56,33 +56,43 @@ if(isset($_GET["code"]))
 	}
 }
 
+$user_data = mysqli_fetch_assoc($db_user_data);
 //This is for check user has login into system by using Google account, if User not login into system then it will execute if block of code and make code for display Login link for Login using Google account.
 if(!isset($_SESSION['access_token']))
 {
 	//Create a URL to obtain user authorization
-	$login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="sign-in-with-google.png" /></a>';
+	$login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="css\Google_login.png" /></a>';
 }else{
+	//설문조사 결과 검색
+	$post_email = $_SESSION['user_email_address'];
+	$db_user_data = mysqli_query($con,
+			"SELECT uid FROM survey WHERE uid= '$post_email'");
+	$user_data = mysqli_num_rows($db_user_data);
+	if($user_data < 5) {
+		header('Location: survey_html.php');
+	}
+	else if($user_date == 5){
 	header('Location: old_diary_test.php');
+	}
 }
 
 ?>
-<html>
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>PHP Login using Google Account</title>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<title>Login to #MOOD</title>
   <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-  
- </head>
- <body>
-  <div class="container">
-   <br />
-   <h2 align="center">PHP Login using Google Account</h2>
-   <br />
-   <div class="panel panel-default">
-   <?php
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!-- <form action="login_test.php" method="post"> -->
+
+<div class="container">
+  <button id="login_button" type="button" class="login">Sign with Google</button>
+  <img src="css\Google_Logo.png" alt="Google">
+  <?php
    if($login_button == '')
    {
     echo '<div class="panel-heading">Welcome User</div><div class="panel-body">';
@@ -96,7 +106,10 @@ if(!isset($_SESSION['access_token']))
     echo '<div align="center">'.$login_button . '</div>';
    }
    ?>
-   </div>
-  </div>
- </body>
+</div>
+
+
+<!-- </form> -->
+
+</body>
 </html>
