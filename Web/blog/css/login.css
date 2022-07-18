@@ -7,10 +7,10 @@ body{
     align-items: center;
 }
 .container {
+  position: relative;
   background-color: white;
   border : solid white;
   border-radius: 12px;
-  position: relative;
   display: flex;
 
   flex-direction: column;
@@ -36,7 +36,7 @@ img {
   border-radius:12px;
 
   top:450.87px;
-  left:center;
+  left:3cm;
   width:344px;
   height:70px;
 

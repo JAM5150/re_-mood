@@ -9,6 +9,7 @@ body{
 
 /*플레이리스트 창*/
 .outside {
+    position:relative;
     background-color: white;
     overflow:auto;
     border : solid white;
@@ -23,6 +24,7 @@ body{
     height:500px;
     width:1293px;
 }
+
 /*감정 선택 버튼 전체설정*/
 #emotionmenu li{
     display: flex;
@@ -36,6 +38,7 @@ body{
     vertical-align: middle;
     text-align: center;
 }
+
 /*감정 버튼 설정*/
 #emotionmenu .emotionbutton{
     position:absolute;
@@ -56,6 +59,8 @@ body{
 #emotionmenu .emotionbutton:hover{
     background-color: #f67280;
 }
+
+
 /*나가기 버튼*/
 #quit{
     position: absolute;
@@ -125,6 +130,7 @@ ul.playlist{
     margin-right: 100px;
 }
   
+/*앨범아트*/
 .albumcover {
     display: inline-block;
     width: 60px;
@@ -135,29 +141,6 @@ ul.playlist{
     box-shadow: 0px 5px 5px 1px #5d5656;
 }
 
-.playlist__info {
-    display: inline-block;
-    align-items: left;
-    margin-left: 0px;
-}
-
-/*노래제목*/
-.playlist__info h5 {
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 25px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-/*가수*/
-.playlist__info h6 {
-    margin-top: 5px;
-    margin-left: 25px;
-    font-size: 15px;
-    font-weight: 700;
-    opacity: 0.6;
-}
 /*재생버튼a태그*/  
 a {
     text-decoration: none;
@@ -165,10 +148,13 @@ a {
 }
 /*재생버튼*/
 .btn-play {
+    position:absolute;
     display:inline-block;
     color:#f67280;
     margin-left: 50px;
-    margin-top: 15px;
+    margin-top: 35px;
+    right:90px;
+    right:90px;
     width: 35px;
     height: 35px;
     border-radius: 100%;
@@ -180,7 +166,43 @@ a {
     color: #e8616e;
 }
 
-#check0 {
-    position:relative;
-    top:1.5px;
+
+.container__list{
+    width: 800px;
+    margin-bottom: 50px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__music-box {
+  height: 100px;
+  display: inline-block;
+  align-items: center;
+}
+
+.container__music-box h5 {
+  height: 10px;
+  font-size: 20px;
+}
+.container__music-box span {
+  height: 10px;
+  color: gray;
+}
+
+.container__detail {
+  display:inline-block;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: flex-start;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}
+
+.song_check {
+    position:absolute;
+    display:inline-block;
+    margin-left:-50px;
+    margin-top:60px;
 }

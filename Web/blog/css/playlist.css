@@ -11,7 +11,7 @@ body{
 .outside {
     position:relative;
     overflow:auto;
-    display:block;
+    display:flex;
     background-color: white;
     border : solid white;
     border-radius: 12px;
@@ -115,28 +115,6 @@ ul.playlist{
     box-shadow: 0px 5px 5px 1px #5d5656;
 }
 
-.playlist__info {
-    display: inline-block;
-    align-items: left;
-    margin-left: 0px;
-}
-
-/*노래제목*/
-.playlist__info h5 {
-    margin-top: 20px;
-    margin-left: 25px;
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-/*가수*/
-.playlist__info h6 {
-    margin-top: 5px;
-    margin-left: 25px;
-    font-size: 15px;
-    font-weight: 700;
-    opacity: 0.6;
-}
 /*재생버튼a태그*/  
 a {
     text-decoration: none;
@@ -144,10 +122,12 @@ a {
 }
 /*재생버튼*/
 .btn-play {
+    position:absolute;
     display:inline-block;
     color:#f67280;
     margin-left: 50px;
-    margin-top: 15px;
+    margin-top: 35px;
+    right:90px;
     width: 35px;
     height: 35px;
     border-radius: 100%;
@@ -157,4 +137,37 @@ a {
 
 .btn-play:hover{
     color: #e8616e;
+}
+
+.container__list{
+    width: 800px;
+    margin-bottom: 50px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__music-box {
+  height: 100px;
+  display: inline-block;
+  align-items: center;
+}
+
+.container__music-box h5 {
+  height: 10px;
+  font-size: 20px;
+}
+.container__music-box span {
+  height: 10px;
+  color: gray;
+}
+
+.container__detail {
+  display:inline-block;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: flex-start;
+  margin-left: 15px;
+  margin-bottom: 30px;
 }
