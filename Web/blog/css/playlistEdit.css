@@ -10,6 +10,7 @@ body{
 /*플레이리스트 창*/
 .outside {
     background-color: white;
+    overflow:auto;
     border : solid white;
     border-radius: 12px;
     position: relative;
@@ -56,7 +57,7 @@ body{
     background-color: #f67280;
 }
 /*나가기 버튼*/
-.quit{
+#quit{
     position: absolute;
     left: 1200px;
     top: 10px;
@@ -67,18 +68,19 @@ body{
     background-color: white;
     cursor:pointer; 
 }
-.quit:after {
+#quit:after {
     display: inline-block;content: "\00d7"; font-size:55pt;
 }
 
 /*삭제&완료버튼*/
 #editsave {
-    display: flex;
+    border:none;
 }
 
 /*편집완료 버튼*/
 #editsave .save{
     position: absolute;
+    display: inline-block;
     background-color: white;
     border:none;
     top:130px;
@@ -141,6 +143,7 @@ ul.playlist{
 
 /*노래제목*/
 .playlist__info h5 {
+    display: inline-block;
     margin-top: 20px;
     margin-left: 25px;
     font-size: 20px;
@@ -175,4 +178,9 @@ a {
 
 .btn-play:hover{
     color: #e8616e;
+}
+
+#check0 {
+    position:relative;
+    top:1.5px;
 }
