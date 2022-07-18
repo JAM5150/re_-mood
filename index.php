@@ -56,12 +56,11 @@ if(isset($_GET["code"]))
 	}
 }
 
-$user_data = mysqli_fetch_assoc($db_user_data);
 //This is for check user has login into system by using Google account, if User not login into system then it will execute if block of code and make code for display Login link for Login using Google account.
 if(!isset($_SESSION['access_token']))
 {
 	//Create a URL to obtain user authorization
-	$login_button = '<a href="'.$google_client->createAuthUrl().'"><img src="css\Google_login.png" /></a>';
+	$login_button = '<a href="'.$google_client->createAuthUrl().'"><button id="login_button" type="button" class="login">Sign with Google</button></a><img src="css\Google_Logo.png" alt="Google">';
 }else{
 	//설문조사 결과 검색
 	$post_email = $_SESSION['user_email_address'];
@@ -74,6 +73,8 @@ if(!isset($_SESSION['access_token']))
 	else if($user_date == 5){
 	header('Location: old_diary_test.php');
 	}
+	
+	// header('Location: old_diary_test.php');
 }
 
 ?>
@@ -90,8 +91,7 @@ if(!isset($_SESSION['access_token']))
 <!-- <form action="login_test.php" method="post"> -->
 
 <div class="container">
-  <button id="login_button" type="button" class="login">Sign with Google</button>
-  <img src="css\Google_Logo.png" alt="Google">
+  
   <?php
    if($login_button == '')
    {
