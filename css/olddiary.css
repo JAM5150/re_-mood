@@ -23,96 +23,6 @@ a:hover {
 .content {
     padding: 7rem 0;
 }
-
-/* 일기 작성부분*/
-
-
-textarea {
-    -webkit-tap-highlight-color: transparent;
-    width: 100%;
-    min-height: 8rem;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    line-height: 2rem;
-    font-weight: 300;
-    background:#FFFFFF;
-    border: none;
-    border-radius: 1rem;
-    outline: none;
-    box-shadow:
-            18px 18px 30px #D1D9E9,
-            -18px -18px 30px #FFFFFF;
-    resize: none;
-    transition: ease .2s;
-    cursor: pointer;
-}
-textarea::placeholder {
-    color: #9fa8da;
-}
-
-.form-control:active,
-.form-control:focus {
-    outline: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-#counter{
-    background:none;
-    border:none;
-}
-.txsub{
-    width:80px;
-    height:20px;
-}
-
-/*요란한 저장ADD버튼 양식*/
-.button_container {
-    position: relative;
-}
-
-
-.btn {
-    border: none;
-    display: block;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    outline: none;
-    overflow: hidden;
-    position: relative;
-    color: #fff;
-    font-weight: 700;
-    font-size: 15px;
-    background-color: #efefef;
-    margin: 0 auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
-}
-
-.btn span {
-    position: relative;
-    z-index: 1;
-}
-
-.btn:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 490%;
-    width: 140%;
-    background: #f67280;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-    transform: translateX(-98%) translateY(-25%) rotate(45deg);
-}
-
-.btn:hover:after {
-    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
-}
-
 /* 저장하면 나오는 노래추천 모달 창 */
 
 .page-wrapper {
@@ -203,15 +113,12 @@ a.btn {
     float: right;
     color: #fff;
 }
-
-/*과거일기부분이지롱:]:]*/
 /*과거일기*/
 .diary {
     overflow:auto;
     -webkit-tap-highlight-color: transparent;
-    margin-top:20px;
     width: 500px;
-    height:270px;
+    height:420px;
     min-height: 8rem;
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -253,19 +160,6 @@ pastdiary li {
     text-transform: uppercase;
 }
 
-.bookmark{
-    cursor:pointer;
-
-}
-
 #check1,#check2,#check3{
     display:none;
-}
-
-.result{
-    display:none;
-}
-
-#diary_time{
-    display:block;
 }

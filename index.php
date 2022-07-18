@@ -63,6 +63,7 @@ if(!isset($_SESSION['access_token']))
 	$login_button = '<a href="'.$google_client->createAuthUrl().'"><button id="login_button" type="button" class="login">Sign with Google</button></a><img src="css\Google_Logo.png" alt="Google">';
 }else{
 	//설문조사 결과 검색
+	/*
 	$post_email = $_SESSION['user_email_address'];
 	$db_user_data = mysqli_query($con,
 			"SELECT uid FROM survey WHERE uid= '$post_email'");
@@ -71,10 +72,10 @@ if(!isset($_SESSION['access_token']))
 		header('Location: survey_html.php');
 	}
 	else if($user_date == 5){
-	header('Location: old_diary_test.php');
+	header('Location: main.php');
 	}
-	
-	// header('Location: old_diary_test.php');
+	*/
+	header('Location: main.php');
 }
 
 ?>
@@ -85,7 +86,7 @@ if(!isset($_SESSION['access_token']))
   <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/login.css?var1">
 </head>
 <body>
 <!-- <form action="login_test.php" method="post"> -->

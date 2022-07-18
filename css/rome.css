@@ -68,6 +68,9 @@
   /* new */
   border-radius: 50%;
 }
+.rd-time-selected {
+  display: none;
+}
 .rd-day-prev-month,
 .rd-day-next-month {
   color: #ccc;
