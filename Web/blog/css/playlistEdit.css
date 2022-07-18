@@ -77,31 +77,12 @@ body{
     display: inline-block;content: "\00d7"; font-size:55pt;
 }
 
-/*삭제&완료버튼*/
-#editsave {
-    border:none;
-}
-
-/*편집완료 버튼*/
-#editsave .save{
-    position: absolute;
-    display: inline-block;
-    background-color: white;
-    border:none;
-    top:130px;
-    left:1150px;
-    line-height:20px;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 13px;
-    cursor:pointer;
-}
 
 /*삭제버튼*/
-#editsave .del{
+.del{
     position: absolute;
     top:130px;
-    left:1100px;
+    left:1150px;
     border:none;
     background-color: white;
     line-height:20px;

@@ -12,7 +12,7 @@ $("#saveBtn").on("click", function(){
 
 
 $(function(){
-    $('#savebtn').click(function(){
+    $('.del').click(function(){
        location.replace('');
     });
 });

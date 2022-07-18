@@ -22,10 +22,8 @@
           <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
           <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
     </ul>
-    <ul id="editsave">
-      <button type="button" class="del" onClick="">삭제</button>
-      <button type="button" class="save" onClick="history.back()">완료</button>
-    </ul>
+    <button type="button" class="del" onClick="">삭제</button>
+
     <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>
       
     <div class="playlist_C">
@@ -39,11 +37,6 @@
                     <span>투애니원</span>
                 </div>
               </div>
-              <div class="btn-play">
-                  <a href="https://open.spotify.com/album/5WyEkWi7ZPMrVSbU1Cabba?highlight=spotify:track:1ErdaM9N7EJ7trhXFnDECg" target="_blank">
-                    <i class="fa-solid fa-play fa-3x"></i>
-                  </a>
-              </div>
           </li>
 
           <li><input type="checkbox" id="chk02" name="chklist" class="song_check">
@@ -53,11 +46,6 @@
                 <h5>하루의 끝(End of a day)</h5>
                 <span>종현</span>
               </div>
-            </div>
-            <div class="btn-play">
-              <a href="https://open.spotify.com/album/6tYoidZViVVzSXG4jKEmNd?highlight=spotify:track:0cAFqRrz8OqAoHdbiCM5OD" target="_blank">
-                <i class="fa-solid fa-play fa-3x"></i>
-              </a>
             </div>
           </li>
 
@@ -69,11 +57,6 @@
                 <span>Mina Okabe</span>
               </div>
             </div>
-            <div class="btn-play">
-              <a href="https://open.spotify.com/album/4VLxnKcNSnVyxw4ByPzQVs?highlight=spotify:track:6dquCx5KAW5jCgGgoTlghL" target="_blank">
-                <i class="fa-solid fa-play fa-3x"></i>
-              </a>
-            </div>
           </li>
 
           <li><input type="checkbox" id="chk04" name="chklist" class="song_check">
@@ -84,17 +67,12 @@
                 <span>YENA(최예나)</span>
               </div>
             </div>
-            <div class="btn-play">
-              <a href="https://open.spotify.com/album/7qldKtsOWklzmwgll5NjCw?highlight=spotify:track:4zCIxSnVWpGNghERX4uWZF" target="_blank">
-                <i class="fa-solid fa-play fa-3x"></i>
-              </a>
-            </div>
           </li>
 
          </div> 
       </ul>
     </div>
 </div>
-  <script src="/Web/blog/js/playlist.js"></script> 
+  <script src="/Web/blog/js/playlistEdit.js"></script> 
   </body>
   </html>      
