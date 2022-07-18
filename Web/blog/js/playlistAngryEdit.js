@@ -9,6 +9,7 @@ $("#saveBtn").on("click", function(){
         checkUnload = false;
         $("#saveForm").submit();
 }); */}
+// $('input[name=chklist]:checked').each(function() {	$(this).toggleClass("checksign", true); // addClass, removeClass   });
 
 //삭제되어야 하는 값을 체크 후 삭제버튼 눌렀을 때 실행되는 함수
 function getCheckboxValue() {
@@ -25,7 +26,10 @@ function getCheckboxValue() {
   // html 상에서 출력 > html에 객체 선언안돼서 주석해제 해도 안댐
   //document.getElementById('result').innerText = result;
 
+  //콘솔로 확인 > 출력은 music0 music2 이런 식
   console.log(JSON.parse(JSON.stringify(result)));
+
+
 
 }
 

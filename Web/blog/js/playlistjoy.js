@@ -1,5 +1,5 @@
 
 
-document.querySelector('#edit').addEventListener("click", () => {
-    $(location).attr('href', " ");
-});
+// document.querySelector('#edit').addEventListener("click", () => {
+//     $(location).attr('href', " ");
+// });
