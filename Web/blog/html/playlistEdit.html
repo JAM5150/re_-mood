@@ -4,7 +4,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />	
     <title>#MOOD Playlist</title>
-	<link rel="stylesheet" href="/Web/blog/css/playlistEdit.css">
+	<link rel="stylesheet" href="/blog/css/playlistEdit.css">
     
     <script
       src="https://kit.fontawesome.com/8aa8789802.js"
@@ -12,6 +12,7 @@
     ></script>
 </head>
 <body>
+  
   <!-- <form action="playlist_edit_test.php" method="post"> -->
     
 <div class="outside">
@@ -19,17 +20,17 @@
           <li><button name="joy" type="button" class="emotionbutton">기쁨</button></li>
           <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
           <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
-          <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
+          <li><button name="surprise" type="button" class="emotionbutton">놀람</button></li>
           <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
     </ul>
-    <button type="button" class="del" onClick="">삭제</button>
+    <button type="button" class="del" onClick='getCheckboxValue()'>삭제</button>
 
     <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>
       
     <div class="playlist_C">
       <ul class="playlist">
         <div class="container__list margin">
-          <li><input type="checkbox" id="chk01" name="chklist" class="song_check">
+          <li><input type="checkbox" id="chk01" name="chklist" value="music0" class="song_check">
             <div class="container__music-box">
                 <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined" width="50%"/>
                 <div class="container__detail">
@@ -39,7 +40,7 @@
               </div>
           </li>
 
-          <li><input type="checkbox" id="chk02" name="chklist" class="song_check">
+          <li><input type="checkbox" id="chk02" name="chklist" value="music1" class="song_check">
             <div class="container__music-box">
               <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/5323/532394.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
@@ -49,7 +50,7 @@
             </div>
           </li>
 
-          <li><input type="checkbox" id="chk03" name="chklist" class="song_check">
+          <li><input type="checkbox" id="chk03" name="chklist" value="music2" class="song_check">
             <div class="container__music-box">
               <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/155189/15518966.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
@@ -59,7 +60,7 @@
             </div>
           </li>
 
-          <li><input type="checkbox" id="chk04" name="chklist" class="song_check">
+          <li><input type="checkbox" id="chk04" name="chklist" value="music3" class="song_check">
             <div class="container__music-box">
               <img class="albumcover"src="https://image.bugsm.co.kr/album/images/original/204456/20445654.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
@@ -73,6 +74,6 @@
       </ul>
     </div>
 </div>
-  <script src="/Web/blog/js/playlistEdit.js"></script> 
+  <script type="text/JavaScript" src="/blog/js/playlistEdit.js"></script> 
   </body>
   </html>      

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />	
     <title>#MOOD Playlist</title>
-	<link rel="stylesheet" href="/Web/blog/css/playlist.css">
+	<link rel="stylesheet" href="/blog/css/playlistAngry.css">
     <script
       src="https://kit.fontawesome.com/8aa8789802.js"
       crossorigin="anonymous"
@@ -15,11 +15,11 @@
 <div class="outside">
   <!-- 감정 메뉴 버튼 리스트-->
     <ul id="emotionmenu">
-        <li><button name="joy" type="button" class="emotionbutton">기쁨</button></li>
-        <li><button name="sad" type="button" class="emotionbutton">슬픔</button></li>
-        <li><button name="soso" type="button" class="emotionbutton">보통</button></li>
-        <li><button name="upset" type="button" class="emotionbutton">놀람</button></li>
-        <li><button name="angry" type="button" class="emotionbutton">화남</button></li>
+        <li><button name="joy" type="button" class="emotionbutton" onclick="location.href='playlistJoy.html'">기쁨</button></li>
+        <li><button name="sad" type="button" class="emotionbutton" onclick="location.href='playlistSad.html'">슬픔</button></li>
+        <li><button name="soso" type="button" class="emotionbutton" onclick="location.href='playlistSoso.html'">보통</button></li>
+        <li><button name="surprise" type="button" class="emotionbutton" onclick="location.href='playlistSurprise.html'">놀람</button></li>
+        <li><button name="angry" type="button" class="angry">화남</button></li>
     </ul>
     <!--편집버튼, 나가기 버튼(X)-->
         <button id="edit" type="button" name="edit" onClick="location.href='playlistEdit.html'">편집</button>
@@ -31,7 +31,8 @@
             <!--노래 목록 정보 포함한 div-->
             <div class="container__list margin">
               <!-- 플레이리스트 li요소1, 음악정보박스-->
-              <li><div class="container__music-box">
+              <li>
+                <div class="container__music-box">
                 <!--앨범커버 이미지-->
                     <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined" width="50%"/>
                     <!--노래제목, 가수-->
@@ -96,6 +97,6 @@
           </ul>
         </div>
     </div>
-<script src="/Web/blog/js/playlist.js"></script> 
+<script src="/Web/blog/js/playlistangry.js"></script> 
 </body>
 </html>

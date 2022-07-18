@@ -36,6 +36,24 @@ body{
     vertical-align: middle;
     text-align: center;
 }
+
+.sad{
+    position:absolute;
+    top:80px;
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    width:auto;
+    font-size:20px;
+    font-weight: bold;
+    font-family:"Trebuchet MS", Dotum, Arial ;
+    border:none;
+    background-color: #f67280;
+    border-radius: 12px;
+    cursor:pointer;
+    padding : 5px 12px;
+}
+
 /*감정 버튼 설정*/
 #emotionmenu .emotionbutton{
     position:absolute;

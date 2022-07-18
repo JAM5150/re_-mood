@@ -1,0 +1,191 @@
+body{
+    background-color: #efefef;
+    height : 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+/*플레이리스트배경박스*/
+.outside {
+    position:relative;
+    overflow:auto;
+    display:flex;
+    background-color: white;
+    border : solid white;
+    border-radius: 12px;
+  
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  
+    height:500px;
+    width:1293px;
+}
+/*감정 버튼리스트 설정*/
+#emotionmenu li{
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    color:black;
+    float:left;
+    margin:100px;
+    line-height:30px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.joy{
+    position:absolute;
+    top:80px;
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    width:auto;
+    font-size:20px;
+    font-weight: bold;
+    font-family:"Trebuchet MS", Dotum, Arial ;
+    border:none;
+    background-color: #f67280;
+    border-radius: 12px;
+    cursor:pointer;
+    padding : 5px 12px;
+}
+/* 각 감정 버튼 설정*/
+#emotionmenu .emotionbutton{
+    position:absolute;
+    top:80px;
+    text-decoration: none;
+    color:black;
+    display: inline-block;
+    width:auto;
+    font-size:20px;
+    font-weight: bold;
+    font-family:"Trebuchet MS", Dotum, Arial ;
+    border:none;
+    background-color: white;
+    border-radius: 12px;
+    cursor:pointer;
+    padding : 5px 12px;
+}
+#emotionmenu .emotionbutton:hover{
+    background-color: #f67280;
+}
+
+
+
+/*나가기 버튼*/
+#quit{
+    position: absolute;
+    left: 1200px;
+    top: 10px;
+    width:50px;
+    height: 70px;
+    display:inline-block;*display:inline;
+    border:none;
+    background-color: white;
+    cursor:pointer; 
+}
+#quit:after {
+    display: inline-block;content: "\00d7"; font-size:55pt;
+}
+/*편집버튼*/
+#edit{
+    position: absolute;
+    top:130px;
+    left:1150px;
+    border:none;
+    background-color: white;
+    line-height:20px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    cursor:pointer;
+}
+
+.playlist_C{
+    position: absolute;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+
+    top:150px;
+    left:150px;
+}
+
+ul.playlist{
+    list-style: none;
+}
+
+.playlist__song {
+    margin-bottom: 30px;
+    margin-right: 100px;
+}
+  
+.albumcover {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 1px #5d5656;
+}
+
+/*재생버튼a태그*/  
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*재생버튼*/
+.btn-play {
+    position:absolute;
+    display:inline-block;
+    color:#f67280;
+    margin-left: 50px;
+    margin-top: 35px;
+    right:90px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-play:hover{
+    color: #e8616e;
+}
+
+.container__list{
+    width: 800px;
+    margin-bottom: 50px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container__music-box {
+  height: 100px;
+  display: inline-block;
+  align-items: center;
+}
+
+.container__music-box h5 {
+  height: 10px;
+  font-size: 20px;
+}
+.container__music-box span {
+  height: 10px;
+  color: gray;
+}
+
+.container__detail {
+  display:inline-block;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: flex-start;
+  margin-left: 15px;
+  margin-bottom: 30px;
+}

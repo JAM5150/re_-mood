@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />	
+    <title>#MOOD Playlist</title>
+	<link rel="stylesheet" href="/blog/css/playlistSad.css">
+    <script
+      src="https://kit.fontawesome.com/8aa8789802.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+
+<div class="outside">
+  <!-- 감정 메뉴 버튼 리스트-->
+    <ul id="emotionmenu">
+        <li><button name="joy" type="button" class="emotionbutton" onclick="location.href='playlistJoy.html'">기쁨</button></li>
+        <li><button name="sad" type="button" class="sad">슬픔</button></li>
+        <li><button name="soso" type="button" class="emotionbutton" onclick="location.href='playlistSoso.html'">보통</button></li>
+        <li><button name="surprise" type="button" class="emotionbutton" onclick="location.href='playlistSurprise.html'">놀람</button></li>
+        <li><button name="angry" type="button" class="emotionbutton" onclick="location.href='playlistAngry.html'">화남</button></li>
+    </ul>
+    <!--편집버튼, 나가기 버튼(X)-->
+        <button id="edit" type="button" name="edit" onClick="location.href='playlistEdit.html'">편집</button>
+        <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
+    <!--플레이리스트-->
+        <div class="playlist_C">
+          <!--플레이리스트 ul-->
+          <ul class="playlist">
+            <!--노래 목록 정보 포함한 div-->
+            <div class="container__list margin">
+              <!-- 플레이리스트 li요소1, 음악정보박스-->
+              <li><div class="container__music-box">
+                <!--앨범커버 이미지-->
+                    <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined" width="50%"/>
+                    <!--노래제목, 가수-->
+                    <div class="container__detail">
+                        <h5>I Don't Care</h5>
+                        <span>투애니원</span>
+                    </div>
+                  </div>
+                  <!--재생버튼-->
+                  <div class="btn-play">
+                      <a href="https://open.spotify.com/album/5WyEkWi7ZPMrVSbU1Cabba?highlight=spotify:track:1ErdaM9N7EJ7trhXFnDECg" target="_blank">
+                        <i class="fa-solid fa-play fa-3x"></i>
+                      </a>
+                  </div>
+                </li>
+    
+              <li>
+                <div class="container__music-box">
+                  <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/5323/532394.jpg?version=undefined" width="50%"/>
+                  <div class="container__detail">
+                    <h5>하루의 끝(End of a day)</h5>
+                    <span>종현</span>
+                  </div>
+                </div>
+                <div class="btn-play">
+                  <a href="https://open.spotify.com/album/6tYoidZViVVzSXG4jKEmNd?highlight=spotify:track:0cAFqRrz8OqAoHdbiCM5OD" target="_blank">
+                    <i class="fa-solid fa-play fa-3x"></i>
+                  </a>
+                </div>
+              </li>
+    
+              <li>
+                <div class="container__music-box">
+                  <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/155189/15518966.jpg?version=undefined" width="50%"/>
+                  <div class="container__detail">
+                    <h5>Every Second</h5>
+                    <span>Mina Okabe</span>
+                  </div>
+                </div>
+                <div class="btn-play">
+                  <a href="https://open.spotify.com/album/4VLxnKcNSnVyxw4ByPzQVs?highlight=spotify:track:6dquCx5KAW5jCgGgoTlghL" target="_blank">
+                    <i class="fa-solid fa-play fa-3x"></i>
+                  </a>
+                </div>
+              </li>
+
+              <li>
+                <div class="container__music-box">
+                  <img class="albumcover"src="https://image.bugsm.co.kr/album/images/original/204456/20445654.jpg?version=undefined" width="50%"/>
+                  <div class="container__detail">
+                    <h5>SMILEY (Feat. BIBI)</h5>
+                    <span>YENA(최예나)</span>
+                  </div>
+                </div>
+                <div class="btn-play">
+                  <a href="https://open.spotify.com/album/7qldKtsOWklzmwgll5NjCw?highlight=spotify:track:4zCIxSnVWpGNghERX4uWZF" target="_blank">
+                    <i class="fa-solid fa-play fa-3x"></i>
+                  </a>
+                </div>
+              </li>
+             </div> 
+          </ul>
+        </div>
+    </div>
+<script src="/Web/blog/js/playlist.js"></script> 
+</body>
+</html>
