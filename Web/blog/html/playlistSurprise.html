@@ -22,8 +22,8 @@
         <li><button name="angry" type="button" class="emotionbutton" onclick="location.href='playlistAngry.html'">화남</button></li>
     </ul>
     <!--편집버튼, 나가기 버튼(X)-->
-        <button id="edit" type="button" name="edit" onClick="location.href='playlistEdit.html'">편집</button>
-        <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>      
+        <button id="edit" type="button" name="edit" onClick="location.href='playlistSurpriseEdit.html'">편집</button>
+        <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) location.href='main.html'; else  alert('입력 취소')"></button>    
     <!--플레이리스트-->
         <div class="playlist_C">
           <!--플레이리스트 ul-->
@@ -96,6 +96,6 @@
           </ul>
         </div>
     </div>
-<script src="/Web/blog/js/playlist.js"></script> 
+<script type="text/JavaScript" src="/Web/blog/js/Surpriseplaylist.js"></script> 
 </body>
 </html>
