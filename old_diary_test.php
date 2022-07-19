@@ -29,13 +29,6 @@ else {
 */
 //index에 맞춘 수정
 $post_email = $_SESSION['user_email_address'];
-$db_user_data = mysqli_query($con,
-		"SELECT uid FROM user WHERE uid= '$post_email'");
-$user_data = mysqli_fetch_assoc($db_user_data);
-if($user_data == NULL) {
-	// echo "if> success";
-	include("user_save.php");
-}
 // $date = $_POST['date']; //테스트용 문장
 $date = date('Y-m-d'); //오늘 날짜 받아오기
 $uid = $_SESSION['user_email_address']; //uid 받아오기

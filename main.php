@@ -85,7 +85,7 @@ function func(){
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/rome.js"></script>
-      <script src="js/calendar.js"></script>
+      <script src="js/calendar.js?ver=2"></script>
     <script src="js/menu.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </form>

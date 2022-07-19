@@ -60,10 +60,7 @@ textarea::placeholder {
 #counter{
     background:none;
     border:none;
-}
-.txsub{
-    width:80px;
-    height:20px;
+    width:30px;
 }
 
 /*요란한 저장ADD버튼 양식*/
@@ -268,4 +265,10 @@ pastdiary li {
 
 #diary_time{
     display:block;
+}
+
+.time{
+    border:none;
+    width:120px;
+    background:white;
 }

@@ -12,10 +12,26 @@ $(function () {
             result.value = value;
 
             //그래서 String을 날짜로 변환해주는 new Date함수에 넣어 변환을해주면 result.value가 날짜값이됩니다 이걸로 일치하는 database데려오면 될것같아요..
-            result.value=new Date(result.value);
+           // result.value=new Date(result.value);
         }
     );
 });
+///아름다운 밤이야 하ㅏㅏㅏㅏㅏ하하하행복해
+//오늘 날짜를 불러옵니ㅏㄷ.
+var today=new Date();
+$(function () {
+// 다이어리 불러오는 소스코드
+// txt 형태로 저장된거라  txt=> 날짜형식으로 변경해서 사용해주어야합니다.!!!
+    rome(inline_cal).on(
+        "data",
+        //data 값을 넣어봅시다야호
+        function (value) {
+//time 이름으로 value를 넣는다구 행복하다구!!!!!!!!!!!우하학
+            $('input[name=time]').attr('value',value);
+        }
+    );
+});
+
 
 //일기작성 남은글자수
 $('#comment').keyup(function (e){
@@ -71,3 +87,5 @@ $(".diary_content").click(function () {
     $('.page-wrapper').toggleClass('blur-it');
     return false;
 });
+
+

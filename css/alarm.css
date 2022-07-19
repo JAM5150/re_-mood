@@ -100,6 +100,8 @@ body {
     font-size: 15px;
     background-color: #efefef;
     box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상 제거 */
 }
 
 .btn span {

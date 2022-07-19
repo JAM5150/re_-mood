@@ -208,12 +208,14 @@ $diary_music_save = mysqli_query($con, "INSERT INTO diary_music (
 		music_id1,
 		music_id2,
 		music_id3,
-		diary_id
+		diary_id,
+        analystic
 		) VALUES (
 		'$result_tracks_id[0]',
 		'$result_tracks_id[1]',
 		'$result_tracks_id[2]',
-        '$diary_id'
+        '$diary_id'.
+        '$post_emotion'
 		)");
 //echo "result1: ".$result_tracks_prev[0];
 //echo " result2: ".$result_tracks_prev[1];

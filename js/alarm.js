@@ -2,42 +2,34 @@ $('.slider-toggle .slider').click(function() {
     $(this).parent('.slider-toggle')
         .toggleClass('left')
         .toggleClass('right');
-    if('.slider-toggle.right'.postition().left==44)
-    {
-        console.log('성공');
-        $("#js-alarm nav").hide(); //display :none 일떄
-    }
-    else
-    {
-        $("#js-alarm nav").show(); //display :none 일떄
-    }
-
 });
-//알림권한요청
-function getNotificationPermission(){
-    //브라우저 지원여부체크
-    if(!("Notification"in window)){
-        alert("데스크톱 알림지원하지 않는 브라우저입니다");
-    }
-    //데스크탑 알림권한요청
-    Notification.requestPermission(function(result) {
-        //권한거절
-        if (result == 'denied') {
-            alert("알림차단합니다.");
-            return false;
-        }
-        //요청을 허용하면,
-        else {
-            //데스크탑 알림 권한 요청 버튼을 비활성화
-            requestPermissionButton.attr('disabled', 'disabled');
-            //데스크탑 메시지 입력폼을 활성화
-            notificationMessage.removeAttr('disabled');
-            //데스크탑 메시지 요청 버튼을 활성화
-            notificationButton.removeAttr('disabled');
-            return;
-        }
-    });
+
+
+if($("grip::after").click())
+{
+    console.log('성공');
+    $("#js-alarm nav").hide(); //display :none 일떄
 }
+else
+{
+    $("#js-alarm nav").show(); //display :none 일떄
+}
+
+
+
+
+function notify() {
+    if (Notification.permission !== "denied") {
+        Notification.requestPermission(permission => {
+            if (permission === "granted") {
+                new Notification("Hi, Notification");
+            } else {
+                alert('Notification denied');
+            }
+        });
+    }
+}
+let permissionCheck=Notification;
 
 //알림부분
 const alarmContainer = document.querySelector('.js-alarm');
@@ -55,22 +47,13 @@ function getAlarm() {
     const current = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`;
     if (current === setValue) {
         console.log(current, setValue);
-//알림띄우기
-        function notify(msg){
-            var options={
-                body:"오늘 일기를 작성하시지 않으셨습니다. 일기를 작성해주세요 :)"
-            }
             //데스크탑 알림요청
-            var notification=new Notification("#mood",options);
-
-            //알림닫기
-            clearInterval(alarm);
+            notification=new Notification('mood',{body:'오늘 일기를 작성하시지 않으셨습니다. 일기를 작성해주세요'});
 
             //3초뒤 알람닫기
-           // setTimeout(function(){
-            //    notification.close();
-           // },5000);
-        }
+            setTimeout(function(){
+                notification.close();
+            },5000);
     }
 }
 

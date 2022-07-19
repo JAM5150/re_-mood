@@ -118,7 +118,7 @@ a.btn {
     overflow:auto;
     -webkit-tap-highlight-color: transparent;
     width: 500px;
-    height:420px;
+    height:500px;
     min-height: 8rem;
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -162,4 +162,10 @@ pastdiary li {
 
 #check1,#check2,#check3{
     display:none;
+}
+
+.time{
+    border:none;
+    width:120px;
+    background:white;
 }
