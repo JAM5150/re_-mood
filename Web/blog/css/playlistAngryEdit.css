@@ -107,7 +107,8 @@ body{
     cursor:pointer;
 }
 
-.playlist_C{
+/*플레이리스트 음악 전체 설정*/
+#playlist_C{
     position: absolute;
     display: table;
     margin-left: auto;
@@ -117,14 +118,11 @@ body{
     left:150px;
 }
 
-ul.playlist{
+/* 플레이리스트 ul설정 */
+#playlist{
     list-style: none;
 }
 
-.playlist__song {
-    margin-bottom: 30px;
-    margin-right: 100px;
-}
   
 /*앨범아트*/
 .albumcover {
@@ -162,7 +160,7 @@ a {
     color: #e8616e;
 }
 
-
+/* 플리 전체 감싼 div */
 .container__list{
     width: 800px;
     margin-bottom: 50px;
@@ -171,6 +169,7 @@ a {
     justify-content: space-between;
 }
 
+/* 각 음악정보 감싼 박스 (앨범아트, 노래제목,가수) */
 .container__music-box {
   height: 100px;
   display: inline-block;
@@ -186,6 +185,7 @@ a {
   color: gray;
 }
 
+/* 노래제목, 가수 */
 .container__detail {
   display:inline-block;
   flex-direction: column;
@@ -196,6 +196,7 @@ a {
   margin-bottom: 30px;
 }
 
+/* 체크박스 */
 .song_check {
     position:absolute;
     display:inline-block;

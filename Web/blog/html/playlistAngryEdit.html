@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width" />	
     <title>#MOOD Playlist</title>
 	<link rel="stylesheet" href="/blog/css/playlistAngryEdit.css">
-    
+  <script src="/blog/js/jquery-3.6.0-.min.js"></script>
     <script
       src="https://kit.fontawesome.com/8aa8789802.js"
       crossorigin="anonymous"
     ></script>
 </head>
 <body>
-  
   <!-- <form action="playlist_edit_test.php" method="post"> -->
-    
 <div class="outside">
     <ul id="emotionmenu">
           <li><button name="joy" type="button" class="emotionbutton">기쁨</button></li>
@@ -23,49 +21,49 @@
           <li><button name="surprise" type="button" class="emotionbutton">놀람</button></li>
           <li><button name="angry" type="button" class="angry">화남</button></li>
     </ul>
+    <!-- 삭제버튼, X(나가기)버튼 -->
     <button type="button" class="del" onClick='getCheckboxValue()'>삭제</button>
-
     <button id="quit" type="button" name="quit" onClick = " if (confirm ('종료하겠습니까 ?')) history.back(); else  alert('입력 취소')"></button>
       
-    <div class="playlist_C">
-      <ul class="playlist">
+    <div id="playlist_C">
+      <ul id="playlist">
         <div class="container__list margin">
-          <li><input type="checkbox" id="chk01" name="chklist" value="music0" class="song_check">
+          <li><input type="checkbox"  name="chklist" value="music0" class="song_check">
             <div class="container__music-box">
                 <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/1901/190115.jpg?version=undefined" width="50%"/>
                 <div class="container__detail">
-                    <h5>I Don't Care</h5>
-                    <span>투애니원</span>
+                    <h5 id="track_name">I Don't Care</h5>
+                    <span id="artist_name">투애니원</span>
                 </div>
               </div>
           </li>
 
-          <li><input type="checkbox" id="chk02" name="chklist" value="music1" class="song_check">
+          <li><input type="checkbox" name="chklist" value="music1" class="song_check">
             <div class="container__music-box">
               <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/5323/532394.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
-                <h5>하루의 끝(End of a day)</h5>
-                <span>종현</span>
+                <h5 id="track_name">하루의 끝(End of a day)</h5>
+                <span id="artist_name">종현</span>
               </div>
             </div>
           </li>
 
-          <li><input type="checkbox" id="chk03" name="chklist" value="music2" class="song_check">
+          <li><input type="checkbox"  name="chklist" value="music2" class="song_check">
             <div class="container__music-box">
               <img class="albumcover" src="https://image.bugsm.co.kr/album/images/original/155189/15518966.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
-                <h5>Every Second</h5>
-                <span>Mina Okabe</span>
+                <h5 id="track_name">Every Second</h5>
+                <span id="artist_name">Mina Okabe</span>
               </div>
             </div>
           </li>
 
-          <li><input type="checkbox" id="chk04" name="chklist" value="music3" class="song_check">
+          <li><input type="checkbox"  name="chklist" value="music3" class="song_check">
             <div class="container__music-box">
               <img class="albumcover"src="https://image.bugsm.co.kr/album/images/original/204456/20445654.jpg?version=undefined" width="50%"/>
               <div class="container__detail">
-                <h5>SMILEY (Feat. BIBI)</h5>
-                <span>YENA(최예나)</span>
+                <h5 id="track_name">SMILEY (Feat. BIBI)</h5>
+                <span id="artist_name">YENA(최예나)</span>
               </div>
             </div>
           </li>
