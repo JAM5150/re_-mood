@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 if(!session_id()) {
 	// id가 없을 경우 세션 시작
 	session_start();
@@ -96,6 +97,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <head>
     <!-- Required meta tags -->
@@ -185,10 +187,8 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                 var arr_js_content = <?php echo json_encode($diary_content_array);?>; 
                             
 	            for(var i = 0; i < diary_len; i += 1){
-		            var movtag = '';
-	            	movtag += '<span class=diary_content>'+ arr_js_time[i]  +' '+ arr_js_content[i] + '<br></span></li>';
 		       
-		             document.write(movtag);
+		             document.write("<span class=diary_content>"+ arr_js_time[i]  +"   "+ arr_js_content[i] + "<br></span></li>");
 	            }
 	            
                 </script>

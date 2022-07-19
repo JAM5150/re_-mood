@@ -12,7 +12,7 @@ $(function () {
     $("html").removeClass("active");
   });
   $("#home").click(function () {
-    $("html").load("main.html");
+    $("html").load("main.php");
   });
   $("#overlay").click(function () {
     $("html").removeClass("active");

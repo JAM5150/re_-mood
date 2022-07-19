@@ -26,7 +26,7 @@ function func(){
   </head>
   </html>
   <body>
-    <form action="old_diary_test.php" method="post">
+    <form action="write_diary_page.php" method="post">
       <!--메뉴 화면-->
     <header>
 
@@ -41,7 +41,7 @@ function func(){
       <div class="box">
         <ul>
           <!--플레이리스트-->
-          <li><b href="#"><span id="playlist">플레이리스트</span></b></li>
+          <li><a href="<?php echo "playlistJoy.php";?>"><span id="playlist">플레이리스트</span></b></li>
           <!--알림-->
           <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></b></li>
           <!--로그아웃-->
@@ -76,7 +76,7 @@ function func(){
       <!--달력 추가버튼 writediary홈페이지로 가는-->
       <div class="button_container">
        
-        <button class="btn" href = "old_diary_test.php"><span id="diaryadd">+</span></button>
+        <button class="btn" href = "write_diary_page.php"><span id="diaryadd">+</span></button>
         </a>
       </div>
         </div>
@@ -85,7 +85,7 @@ function func(){
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/rome.js"></script>
-      <script src="js/calendar.js?ver=2"></script>
+      <script src="js/calendar.js?ver=4"></script>
     <script src="js/menu.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </form>

@@ -86,9 +86,10 @@ $survey_id = $uid.strval($emotion);
 $db_survey_data = mysqli_query($con,
 		"SELECT track_id FROM survey WHERE survey_id= '$survey_id'");
 $user_survey_data = mysqli_fetch_assoc($db_survey_data);
+$survey_old_data = $user_survey_data['track_id'];
 if($user_survey_data != NULL){
 	$survey_update_sql_result = mysqli_query($con, "DELETE FROM survey WHERE uid = '$uid' AND analystic = '$analystic'");
-	$playlist_delte_sql_result = mysqli_query($con, "DELETE FROM playlist WHERE uid = '$uid' AND analystic = '$analystic' AND track_id = '$user_survey_data'");
+	$playlist_delte_sql_result = mysqli_query($con, "DELETE FROM playlist WHERE uid = '$uid' AND analystic = '$analystic' AND track_id = '$survey_old_data'");
 }
 
 $survey_save_sql_result = mysqli_query($con, "INSERT INTO survey (
