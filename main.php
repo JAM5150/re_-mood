@@ -43,7 +43,7 @@ function func(){
           <!--플레이리스트-->
           <li><b href="#"><span id="playlist">플레이리스트</span></b></li>
           <!--알림-->
-          <li><b href="#"><span id="alarm">알림</span></b></li>
+          <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></b></li>
           <!--로그아웃-->
           <li><a href="<?php echo "logout.php";?>"><span id="logout">로그아웃</span></a>
           

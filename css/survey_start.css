@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  background-color: white;
+  /* width: 600px; */
+  padding: 50px 30px 15px 30px;
+  /* box-shadow: 0px 3px 15px 7px #979797; */
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 17px;
+}
+
+.survey__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 링크 색상 제거 */
+}
+
+.start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f67280;
+  color: white;
+  width: 100px;
+  height: 45px;
+  /* padding: 0px 30px 0px 30px; */
+  border-radius: 35px;
+}

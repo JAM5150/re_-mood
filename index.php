@@ -63,19 +63,33 @@ if(!isset($_SESSION['access_token']))
 	$login_button = '<a href="'.$google_client->createAuthUrl().'"><button id="login_button" type="button" class="login">Sign with Google</button></a><img src="css\Google_Logo.png" alt="Google">';
 }else{
 	//설문조사 결과 검색
-	/*
+	
 	$post_email = $_SESSION['user_email_address'];
+	
 	$db_user_data = mysqli_query($con,
 			"SELECT uid FROM survey WHERE uid= '$post_email'");
 	$user_data = mysqli_num_rows($db_user_data);
+	
 	if($user_data < 5) {
-		header('Location: survey_html.php');
+		$db_us_data = mysqli_query($con,
+				"SELECT uid FROM user WHERE uid= '$post_email'");
+		$us_data = mysqli_fetch_assoc($db_user_data);
+		if($us_data['uid'] == NULL) {
+			$userdata_save_sql_result = mysqli_query($con, "INSERT INTO user (
+					uid,
+					is_noti
+					) VALUES (
+					'$post_email',
+					false
+					)");
+		}	
+		header('Location: survey_start.php');
 	}
-	else if($user_date == 5){
+	else if($user_data == 5){
 	header('Location: main.php');
 	}
-	*/
-	header('Location: main.php');
+	
+	//header('Location: main.php');
 }
 
 ?>

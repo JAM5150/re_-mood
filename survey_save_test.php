@@ -1,50 +1,33 @@
 <?php
 if(!session_id()) {
-	// id°¡ ¾øÀ» °æ¿ì ¼¼¼Ç ½ÃÀÛ
+	// idê°€ ì—†ì„ ê²½ìš° ì„¸ì…˜ ì‹œì‘
 	session_start();
 }
-include("logout_test.php");
-//db ¿¬°á
+//db ì—°ê²°
 include("DB_connect.php");
-$post_email = $_POST['email'];
-//uid ¼³Á¤
-$_SESSION['uid'] = $post_email;
-// ±âÁ¸ À¯Àú Á¤º¸ È®ÀÎ
-$db_user_data = mysqli_query($con,
-		"SELECT uid FROM user WHERE uid= '$post_email'");
-$user_data = mysqli_fetch_assoc($db_user_data);
-// printf($user_data['uid']);
-//À¯Àú Á¤º¸°¡ ¾øÀ» ½Ã  DBÀúÀå
-if($user_data == NULL) {
-	// echo "if> success";
-	include("user_save.php");
-}
-else {
-	//À¯Àú Á¤º¸°¡ ÀÖ´Ù¸é DBÀúÀåÀº °Ç³Ê¶Ü
-	// echo "else > success";
-}
-// º¯¼ö ¼±¾ğ ¹× °ª ¹Ş¾Æ¿À±â
-$artist_id ='7IrDIIq3j04exsiF3Z7CPg';
-$artist_name = 'Beenzino';
-$tracks_id = '6ZY5lLjDmK6Bzon5vseYLn';
-$tracks_name = 'Break';
-$tracks_image = 'https://i.scdn.co/image/ab67616d0000b273e1e537461e981a5e21b8e693';
-$tracks_prev = NULL;
-$uid = $_SESSION['uid'];
-echo $uid;
-$analystic = $_POST['analystic'];
+$uid = $_SESSION['user_email_address'];
 
-//Å×½ºÆ®¿ë µ¥ÀÌÅÍ phpÆÄÀÏ
+// ë³€ìˆ˜ ì„ ì–¸ ë° ê°’ ë°›ì•„ì˜¤ê¸°
+
+$artist_id =$_POST['result_artist_id'];
+$artist_name =$_POST['result_artist_name'];
+$tracks_id = $_POST['result_track_id'];
+$tracks_name = $_POST['result_track_name'];
+$tracks_image = $_POST['result_track_image'];
+$tracks_prev = NULL;
+// echo $uid;
+$analystic = $_POST['analystic'];
+//í…ŒìŠ¤íŠ¸ìš© ë°ì´í„° phpíŒŒì¼
 // include("music_test_data.php");
 
 
 
-//³ë·¡ ÀúÀåµÇ¾îÀÖ´ÂÁö È®ÀÎ
+//ë…¸ë˜ ì €ì¥ë˜ì–´ìˆëŠ”ì§€ í™•ì¸
 $save_test = mysqli_query($con,
 		"SELECT artist_id FROM music_info WHERE track_id = '$tracks_id'");
 $row = mysqli_fetch_assoc($save_test);
 
-//³ë·¡°¡ ÀúÀåÀÌ ¾ÈµÇ¾îÀÖ´Ù¸é insert ³ë·¡°¡ ÀúÀåÀÌ µÇ¾îÀÖ´Ù¸é °Ç³Ê¶Ü
+//ë…¸ë˜ê°€ ì €ì¥ì´ ì•ˆë˜ì–´ìˆë‹¤ë©´ insert ë…¸ë˜ê°€ ì €ì¥ì´ ë˜ì–´ìˆë‹¤ë©´ ê±´ë„ˆëœ€
 if ($row == null) {
 	echo "<br/>null<br/>";
 	$music_save_sql_result = mysqli_query($con, "INSERT INTO music_info (
@@ -64,7 +47,7 @@ if ($row == null) {
 			)");
 	
 	
-	// Å×ÀÌºí insert È®ÀÎ Ãâ·Â
+	// í…Œì´ë¸” insert í™•ì¸ ì¶œë ¥
 	if($music_save_sql_result) {
 		echo "<br />music INSERT success<br />";
 	} else {
@@ -77,7 +60,7 @@ else {
 	echo "<br/>is not null<br/>";
 }
 $emotion = 0;
-//survey_id = 'uid' + ¼ıÀÚ (1~5) »ı¼º
+//survey_id = 'uid' + ìˆ«ì (1~5) ìƒì„±
 switch ($analystic) {     
 	case 'surprise':
 		$emotion = 1;
@@ -98,36 +81,35 @@ switch ($analystic) {
 		break;
 }
 $survey_id = $uid.strval($emotion);
-echo $survey_id."<br/>";
-// ¼³¹®Á¶»ç¶õ¿¡ ÀúÀå
+// echo $survey_id."<br/>";
+// ì„¤ë¬¸ì¡°ì‚¬ë€ì— ì €ì¥
 $db_survey_data = mysqli_query($con,
 		"SELECT track_id FROM survey WHERE survey_id= '$survey_id'");
 $user_survey_data = mysqli_fetch_assoc($db_survey_data);
-if($user_survey_data == NULL){
-	$survey_save_sql_result = mysqli_query($con, "INSERT INTO survey (
-			survey_id,
-			uid,
-			analystic,
-			track_id
-			) VALUES (
-			'$survey_id',
-			'$uid',
-			'$analystic',
-			'$tracks_id'
-			)");
-	if($survey_save_sql_result) {
-		echo "<br />survey INSERT success<br />";
-	} else {
-		echo "<br />survey INSERT fail : ";
-		echo("Errormessage:". $con -> error);
-	}
-}
-else{
-	$survey_update_sql_result = mysqli_query($con, "UPDATE survey SET track_id = '$track_id' WHERE survey_id = '$survey_id'");
+if($user_survey_data != NULL){
+	$survey_update_sql_result = mysqli_query($con, "DELETE FROM survey WHERE uid = '$uid' AND analystic = '$analystic'");
 	$playlist_delte_sql_result = mysqli_query($con, "DELETE FROM playlist WHERE uid = '$uid' AND analystic = '$analystic' AND track_id = '$user_survey_data'");
 }
+
+$survey_save_sql_result = mysqli_query($con, "INSERT INTO survey (
+		survey_id,
+		uid,
+		analystic,
+		track_id
+		) VALUES (
+		'$survey_id',
+		'$uid',
+		'$analystic',
+		'$tracks_id'
+		)");
+if($survey_save_sql_result) {
+	echo "<br />survey INSERT success<br />";
+} else {
+	echo "<br />survey INSERT fail : ";
+	echo("Errormessage:". $con -> error);
+}
 $playlist_id = $uid.$tracks_id.strval($emotion);
-//playlist¿¡ ÀúÀå
+//playlistì— ì €ì¥
 $playlist_save_sql_result = mysqli_query($con, "INSERT INTO playlist (
 		uid,
 		analystic,

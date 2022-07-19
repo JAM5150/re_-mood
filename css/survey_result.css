@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  /* background-color: white; */
+  /* width: 600px; */
+  padding: 50px 30px 15px 30px;
+  /* box-shadow: 0px 3px 15px 7px #979797; */
+}
+
+header {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+header h5 {
+  text-align: center;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-weight: 350;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.playlist {
+  margin-bottom: 50px;
+}
+
+.playlist__song {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.emotion {
+  width: 50px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 7px;
+}
+
+.playlist__info {
+  margin-top: 10px;
+  display: flex;
+  /* display: block; */
+  align-items: center;
+  margin-left: 0px;
+  width: 600px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+}
+
+.track_name {
+  /* margin-top: 25px; */
+  margin-left: 45px;
+  font-size: 22px;
+  font-weight: 700;
+  /* margin-bottom: 5px; */
+}
+
+.artist_name {
+  /* margin-top: 5px; */
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.6;
+  margin-right: 45px;
+}
+
+a {
+  /* display: flex;
+  justify-content: center; */
+  text-decoration: none;
+  color: inherit;
+}
+
+.prev-btn:before {
+  font-family: "FontAwesome";
+  content: "\f060";
+  font-weight: 900;
+  /* margin-right: 10px; */
+}
+
+.prev-btn {
+  cursor: pointer;
+  font-size: 20px;
+  float: left;
+  background-color: #f67280;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border-radius: 100%;
+  border: 0;
+  outline: 0;
+}
+
+.next-btn:after {
+  font-family: "FontAwesome";
+  content: "\f061";
+}
+
+.next-btn {
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+  background-color: #f67280;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  border-radius: 100%;
+  border: 0;
+  outline: 0;
+}
+
+/* 수정 전꺼 - 페이지 가운데에 완료 버튼 뜸
+.end-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f67280;
+  color: white;
+  width: 100px;
+  height: 45px;
+  border-radius: 35px;
+}
+*/

@@ -1,8 +1,8 @@
 <?php
 include("DB_connect.php");
 
-$delete_table = 'diary';
-$result = mysqli_query($con, "DELETE FROM $delete_table WHERE diary_date = '2022-07-16'");
+$delete_table = 'survey';
+$result = mysqli_query($con, "DELETE FROM $delete_table WHERE uid = 'hellom2023@gmail.com'");
 if($result) {
 	echo "<br />DELETE success<br />";
 } else {

@@ -22,7 +22,6 @@
 </html>
 <body>
 <form action="diary_main_test.php" method="post">
-
     <header>
         <span id="home"><i class="fa-solid fa-house"></i></span>
         <span id="menu"><i class="fa-solid fa-bars"></i></span>

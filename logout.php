@@ -8,7 +8,7 @@ include('config.php');
 $google_client->revokeToken();
 
 //Destroy entire session data.
-session_destroy();
+session_unset();
 
 //redirect page to index.php
 header('location:index.php');
