@@ -41,9 +41,9 @@ function func(){
       <div class="box">
         <ul>
           <!--플레이리스트-->
-          <li><a href="<?php echo "playlistJoy.php";?>"><span id="playlist">플레이리스트</span></b></li>
+          <li><a href="<?php echo "playlistJoy.php";?>"><span id="playlist">플레이리스트</span></a></li>
           <!--알림-->
-          <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></b></li>
+          <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></a></li>
           <!--로그아웃-->
           <li><a href="<?php echo "logout.php";?>"><span id="logout">로그아웃</span></a>
           
@@ -86,7 +86,7 @@ function func(){
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/rome.js"></script>
       <script src="js/calendar.js?ver=4"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?ver=1"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </form>
 

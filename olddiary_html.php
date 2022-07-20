@@ -28,7 +28,7 @@ include("DB_connect.php");
  }
  */
 //index에 맞춘 수정
- $ddate = $_POST['time']; //테스트용 문장
+ $ddate = $_SESSION['time']; //테스트용 문장
 // $P_date = preg_replace("/[ #\&\+\-%@=\/\\\:;,\.'\"\^`~\_|\!\?\*$#<>()\[\]\{\}]/i", "", $P_date);
 // $date = date('Y-m-d', strtotime($P_date));
 $date = date('Y-m-d', strtotime($ddate)); //오늘 날짜 받아오기
@@ -137,11 +137,11 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
             <div class="box">
                 <ul>
                     <!--플레이리스트 메뉴-->
-                    <li><a href="#"><span id="playlist">플레이리스트</span></a></li>
+                    <li><a href="<?php echo "playlistJoy.php";?>"><span id="playlist">플레이리스트</span></a></li>
                     <!--알림 메뉴-->
-                    <li><a href="#"><span id="alarm">알림</span></a></li>
+                    <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></a></li>
                     <!--로그아웃 메뉴-->
-                    <li><a href="#"><span id="logout">로그아웃</span></a></li>
+                    <li><a href="<?php echo "logout.php";?>"><span id="logout">로그아웃</span></a>
                 </ul>
             </div>
         </div>
@@ -167,7 +167,10 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                 </form>
             </div>
             <!--과거 다이어리-->
-            <
+            <pastdiary>
+                <div class="diary">
+                    <div class="diary_content_box">
+                        <ul id="mood_diary_content">
                             <!--다이어리 시계 type="datetime-localtime" 으로 불러와서 그대로 사용해도 될것같은데 혹시 오류 뜨면 string->날짜형식으로 변경해주기... 그래도 에러나면 부르기 ㅠ
                              disable="" button 효과 사라지는거에요... css에서 하는거 안보여서 그냥html에 효과주었어요 건들이지 말아주세오내용 구성-->
                             <!--diary 시간 : time , diary 내용:diary_content-->
@@ -177,11 +180,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                             <li><input type="datetime-localtime" class="time" name="time"disabled=""><span class=diary_content>행복한월요일밤</span></li>
                             <li><input type="datetime-localtime" class="time" name="time"disabled=""><span class=diary_content>행복한월요일밤</span></li>
                             -->  <script>
-                            var abc = '';
-                            abc += '<pastdiary>';
-                            abc += '<div class="diary">';
-                            abc += '<div class="diary_content_box">';
-                            abc += '<ul id="mood_diary_content">';
+                            
 				var diary_len = "<?php echo $i; ?>";
                 var arr_js_time = <?php echo json_encode($diary_time_array);?>;
                 var arr_js_content = <?php echo json_encode($diary_content_array);?>; 
@@ -193,15 +192,13 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 		            
 		             document.write(movtag);
 	            }
-	            var def = '';
-                def += '</ul>';
-                def += '</div>';
-                def += '</div>';
-                def += '</pastdiary>';
-                document.write(def);
+	            
 	            
                 </script>
-                           
+               </ul>
+                    </div>
+                </div>
+            </pastdiary>     
         </div>
         <!-- Modal -->
         
@@ -214,7 +211,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/rome.js"></script>
     <script src="js/writediary.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?ver=1"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </form>
 

@@ -36,7 +36,7 @@ $(function () {
                     var insdoc = "";
                     insdoc = "<input type='hidden' name='time' value='" + result.value + "'>";
                     */
-                    $("html").load("olddiary_html.php", { time: result.value });
+                    $("html").load("home2.html", { time: result.value });
                     //consolelog는 F12에서 잘돌아가나 확인하기위해....지우셔도됩니다
                     console.log(new Date(result.value));
                 }

@@ -119,9 +119,9 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
         <div class="container">
             <div class="box">
                 <ul>
-                    <li><a href="#"><span id="playlist">플레이리스트</span></a></li>
-                    <li><a href="#"><span id="alarm">알림</span></a></li>
-                    <li><a href="#"><span id="logout">로그아웃</span></a></li>
+                    <li><a href="<?php echo "playlistJoy.php";?>"><span id="playlist">플레이리스트</span></a></li>
+                    <li><a href="<?php echo "alarm.php";?>"><span id="alarm">알림</span></a></li>
+                    <li><a href="<?php echo "logout.php";?>"><span id="logout">로그아웃</span></a>
                 </ul>
             </div>
         </div>
@@ -194,7 +194,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/rome.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/menu.js?ver=1"></script>
     <script src="js/writediary.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
