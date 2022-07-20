@@ -150,7 +150,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
     </div>
             <!--남은 글자수 계산 요놈은 php 안해줘도됩니다-->
             <div class="box">
-                <textarea name="comment" id="comment" placeholder="감정일기를 작성해주세요"></textarea>
+                <textarea name="content" id="comment" placeholder="감정일기를 작성해주세요"></textarea>
                 <span class="txsub">남은 글자수 : <input type="text" readonly value="120" name="counter" id="counter" disabled=""> / 120
                 </span>
                 <pastdiary>

@@ -22,6 +22,7 @@ encoding/playlistSoso.php=UTF-8
 encoding/playlistSosoEdit.php=UTF-8
 encoding/playlistSurprise.php=UTF-8
 encoding/playlistSurpriseEdit.php=UTF-8
+encoding/select_sql.php=UTF-8
 encoding/survey_insert.php=UTF-8
 encoding/survey_result_page.php=UTF-8
 encoding/survey_save_test.php=UTF-8

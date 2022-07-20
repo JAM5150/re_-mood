@@ -23,10 +23,19 @@ $(function () {
             //불러온 data 값을 result value값에 살포시 넣어줍니다.
             result.value = value;
             // 날짜 를 클릭시
-            $("#inline_cal").click(function(){
+            $("#inline_cal").click(function () {
+                
                 //만약 날짜가 오늘 날짜 이전이라면
                 if(new Date(result.value)<today) {
                     // olddiary html을 불러옵니다
+                    /*
+                    var form = document.createElement('form');
+                    form.setAttribute('method', 'post');
+                    form.setAttribute('action', 'olddiary_html.php');
+                    document.charset = "utf-8";
+                    var insdoc = "";
+                    insdoc = "<input type='hidden' name='time' value='" + result.value + "'>";
+                    */
                     $("html").load("olddiary_html.php", { time: result.value });
                     //consolelog는 F12에서 잘돌아가나 확인하기위해....지우셔도됩니다
                     console.log(new Date(result.value));

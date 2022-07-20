@@ -80,7 +80,6 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 	$i = $i + 1;
 }
 
-
 ?>
 <!DOCTYPE html>
 <head>
@@ -141,11 +140,14 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                 <textarea name="content" id="comment" placeholder="감정일기를 작성해주세요"></textarea>
                 <span class="txsub">남은 글자수 : <input type="text" readonly value="120" name="counter" id="counter">
                 </span>
-                <pastdiary>
-                    <div class="diary">
-                        <div class="diary_content_box">
-                            <ul>
+                
                                 <script>
+                                var abc = '';
+                                abc += '<pastdiary>';
+                                abc += '<div class="diary">';
+                                abc += '<div class="diary_content_box">';
+                                abc += '<ul>';
+                                document.write(abc);
 				var diary_len = "<?php echo $i; ?>";
                 var arr_js_time = <?php echo json_encode($diary_time_array);?>;
                 var arr_js_content = <?php echo json_encode($diary_content_array);?>; 
@@ -154,13 +156,16 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 	            	document.write("<li><input class=time>" + arr_js_time[i] + "</input>");
 		             document.write("<span class=diary_content> "+ arr_js_content[i] + "</span></li>");
 	            }
+	                            var def = '';
+	                            def += '</ul>';
+	                            def += '</div>';
+	                            def += '</div>';
+	                            def += '</pastdiary>';
+	                            document.write(def);
 	            
                 </script>
 
-                            </ul>
-                        </div>
-                    </div>
-                </pastdiary>
+                            
 
             </div>
               <div class="button_container">

@@ -1,5 +1,5 @@
 <?php
-header("Refresh:5");
+// header("Refresh:5");
 if(!session_id()) {
 	// id가 없을 경우 세션 시작
 	session_start();
@@ -81,11 +81,11 @@ for($j = 0; $j < $playlist_length; $j = $j + 1) {
                  var arr_js_artistname = <?php echo json_encode($return_artist_name);?>;
                  var arr_js_trackname = <?php echo json_encode($return_track_name);?>;
                  var arr_js_trackimage = <?php echo json_encode($return_track_image);?>;
-                 var arr_js_trackprev = <?php echo json_encode($return_track_prev);?>;
+                 var arr_js_trackid = <?php echo json_encode($return_track_id);?>;
 
                  for(var i = 0; i < playlist_len; i += 1){
                      var movtag ='';
-                     movtag += '<li><input type="checkbox" id="chk' + i + '" name="chklist" value="music' + i +'" class="song_check">';
+                     movtag += '<li><input type="checkbox" id="chk' + i + '" name="chklist" value="' + arr_js_trackid[i] +'" class="song_check">';
                      movtag += '<div class="container__music-box">';
                      movtag += '<img class="albumcover" src="' + arr_js_trackimage[i] + '" width="50%"/>';
                      movtag += '<div class="container__detail">';

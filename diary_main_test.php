@@ -3,7 +3,7 @@ if(!session_id()) {
 	// id가 없을 경우 세션 시작
 	session_start();
 }
-
+unset($_SESSION['analystic']);
 // 연결을 위한 DB 정보
 include("DB_connect.php");
 
@@ -78,7 +78,7 @@ $result_explode = explode('"', $result);      //문자열 " 기준으로 쪼개�
 //echo "<br />emotion: ".$result_explode[7]; // 받은 감정 부분 확인 출력
 
 $post_emotion = $result_explode[7]; //받은 감정 emotion 저장
-
+$_SESSION['analystic'] = $post_emotion;
 //diary 테이블에 저장
 $diary_sql_result = mysqli_query($con, "INSERT INTO diary (
 		uid,
@@ -214,7 +214,7 @@ $diary_music_save = mysqli_query($con, "INSERT INTO diary_music (
 		'$result_tracks_id[0]',
 		'$result_tracks_id[1]',
 		'$result_tracks_id[2]',
-        '$diary_id'.
+        '$diary_id',
         '$post_emotion'
 		)");
 //echo "result1: ".$result_tracks_prev[0];
@@ -253,6 +253,7 @@ if($diary_music_save) {
 
       <ul class="playlist">
         <li class="playlist__song">
+          <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
           <img
             class="albumcover"
             src=<?php echo $result_tracks_image[0];?>
@@ -275,6 +276,7 @@ if($diary_music_save) {
         </li>
 
         <li class="playlist__song">
+        <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
             <img
             class="albumcover"
             src=<?php echo $result_tracks_image[1];?>
@@ -297,6 +299,7 @@ if($diary_music_save) {
         </li>
 
         <li class="playlist__song">
+        <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
             <img
               class="albumcover"
               src=<?php echo $result_tracks_image[2];?>
@@ -317,6 +320,7 @@ if($diary_music_save) {
             </div>
         </li>
       </ul>
+      <button id="save_btn" type="button" class="save" onclick="save_selected()">저장 완료</button>
     </div>
   </body>
 </html>

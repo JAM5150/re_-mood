@@ -167,10 +167,7 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                 </form>
             </div>
             <!--과거 다이어리-->
-            <pastdiary>
-                <div class="diary">
-                    <div class="diary_content_box">
-                        <ul id="mood_diary_content">
+            <
                             <!--다이어리 시계 type="datetime-localtime" 으로 불러와서 그대로 사용해도 될것같은데 혹시 오류 뜨면 string->날짜형식으로 변경해주기... 그래도 에러나면 부르기 ㅠ
                              disable="" button 효과 사라지는거에요... css에서 하는거 안보여서 그냥html에 효과주었어요 건들이지 말아주세오내용 구성-->
                             <!--diary 시간 : time , diary 내용:diary_content-->
@@ -180,22 +177,31 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
                             <li><input type="datetime-localtime" class="time" name="time"disabled=""><span class=diary_content>행복한월요일밤</span></li>
                             <li><input type="datetime-localtime" class="time" name="time"disabled=""><span class=diary_content>행복한월요일밤</span></li>
                             -->  <script>
+                            var abc = '';
+                            abc += '<pastdiary>';
+                            abc += '<div class="diary">';
+                            abc += '<div class="diary_content_box">';
+                            abc += '<ul id="mood_diary_content">';
 				var diary_len = "<?php echo $i; ?>";
                 var arr_js_time = <?php echo json_encode($diary_time_array);?>;
                 var arr_js_content = <?php echo json_encode($diary_content_array);?>; 
                             
 	            for(var i = 0; i < diary_len; i += 1){
 		            var movtag = '';
-	            	movtag += '<span class=diary_content>'+ arr_js_time[i]  +' '+ arr_js_content[i] + '<br></span></li>';
-		       
+	            	//movtag += '<li><span class=diary_content>'+ arr_js_time[i]  +' '+ arr_js_content[i] + '<br></span></li>';
+		            movtag += '<li><input type="datetime-localtime" class="time" name="time" disabled="" value="' + arr_js_time[i] + '"><span class=diary_content>' + arr_js_content[i] + '</span></li>';
+		            
 		             document.write(movtag);
 	            }
+	            var def = '';
+                def += '</ul>';
+                def += '</div>';
+                def += '</div>';
+                def += '</pastdiary>';
+                document.write(def);
 	            
                 </script>
-                            </ul>
-                    </div>
-                </div>
-            </pastdiary>
+                           
         </div>
         <!-- Modal -->
         

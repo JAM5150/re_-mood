@@ -1,5 +1,5 @@
 <?php 
-header("Refresh:5");
+
 if(!session_id()) {
 	// id가 없을 경우 세션 시작
 	session_start();
