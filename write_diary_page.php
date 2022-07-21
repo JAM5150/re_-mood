@@ -166,9 +166,9 @@ while($row = mysqli_fetch_assoc($old_diary_data)) {
 
                  for(var i = 0; i < diary_len; i += 1){
                      var movtag ='';
-                     movtag += '<li><input type="text" class="time" name="time" disabled="" value="' + arr_js_time[i] + '" >';
+                     movtag += '<li>';
                      
-                     movtag += '<span class=diary_content>' + arr_js_content[i] + '</span></li>';
+                     movtag += '<span class=diary_content>' + arr_js_time[i] +' '+ arr_js_content[i] + '</br></span></li>';
                      
 		             document.write(movtag);
 	            }

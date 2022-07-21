@@ -239,8 +239,10 @@ if($diary_music_save) {
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/result.css" />
+    <script src="js/jquery-3.6.0-.min.js"></script>
   </head>
   <body>
+  
     <div class="wrapper">
       <div class="top-header">
         <h2><?php echo $d_date;?> 기준</h2>
@@ -253,7 +255,7 @@ if($diary_music_save) {
 
       <ul class="playlist">
         <li class="playlist__song">
-          <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
+          <input type=checkbox name=chklist value="<?php echo $result_tracks_id[0];?>" >
           <img
             class="albumcover"
             src=<?php echo $result_tracks_image[0];?>
@@ -276,7 +278,7 @@ if($diary_music_save) {
         </li>
 
         <li class="playlist__song">
-        <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
+        <input type=checkbox name=chklist value="<?php echo $result_tracks_id[1];?>">
             <img
             class="albumcover"
             src=<?php echo $result_tracks_image[1];?>
@@ -299,7 +301,7 @@ if($diary_music_save) {
         </li>
 
         <li class="playlist__song">
-        <input type=checkbox name=chklist value=".$chkList[$i]["num"]." onclick=save_selected()>
+        <input type=checkbox name=chklist value="<?php echo $result_tracks_id[2];?>">
             <img
               class="albumcover"
               src=<?php echo $result_tracks_image[2];?>
@@ -322,6 +324,7 @@ if($diary_music_save) {
       </ul>
       <button id="save_btn" type="button" class="save" onclick="save_selected()">저장 완료</button>
     </div>
+    <script type="text/JavaScript" src="js/result.js?var=1"></script> 
   </body>
 </html>
                              

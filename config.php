@@ -15,7 +15,7 @@ $google_client->setClientId('265344559907-eek9mfsqg5vanj0obpb581bodd4g7h4h.apps.
 $google_client->setClientSecret('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');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('http://testtestmoodtest.tk/webtest/index.php');
+$google_client->setRedirectUri('http://moodprojecttest.tk/webtest/index.php');
 
 //
 $google_client->addScope('email');
